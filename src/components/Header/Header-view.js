@@ -1,0 +1,1 @@
+// stateless view Component. SHOULD be able to be pure functional Component (no hooks).

@@ -4,7 +4,7 @@ const ImageminWebpWebpackPlugin= require("imagemin-webp-webpack-plugin");
 module.exports = {
   entry: './src/index.js',
   output: {
-    filename: 'bundle.js',
+    filename: 'scripts/[name].[hash].js',
     path: path.resolve(__dirname, 'dist')
   },
   module: {
@@ -19,7 +19,13 @@ module.exports = {
       {
         test: /\.(gif|png|jpe?g|svg)$/i,
         use: [
-          'file-loader',
+          {
+            // file-loader is required for image-webpack-loader
+            loader: 'file-loader',
+            options: {
+              name: 'images/[name].[hash].[ext]'
+            }
+          },
           {
             loader: 'image-webpack-loader',
             options: {
@@ -42,10 +48,21 @@ module.exports = {
               // lossless gif compressor
               gifsicle: {
                 interlaced: false,
-              },
+              }
             }
           },
         ],
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: 'fonts/[hash].[ext]'
+            }
+          }
+        ]
       }
     ]
   },

@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import './style.css';
+import './styles/style.css';
 import Icon from './images/robot.jpg';
 
 function component() {
@@ -8,10 +8,8 @@ function component() {
   element.innerHTML = _.join(['Hello', 'webpack'], ' ');
   element.classList.add('hello');
 
-  // Add the image to our existing div.
   const myIcon = new Image();
   myIcon.src = Icon;
-
   element.appendChild(myIcon);
 
   return element;

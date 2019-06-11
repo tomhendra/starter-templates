@@ -1,5 +1,27 @@
-node_modules/
-dist/
+# System
+*~
+*#
+.#*
+.DS_Store
+
+# environmental variables
 .env.test
 .env.development
-.DS_Store
+
+# Test
+coverage
+.eslintcache
+
+# Logs
+*.log
+
+# npm 
+node_modules/
+.npm
+npm-debug.log*
+
+# package-lock.json
+/dist/bundle.js
+/dist/index.html
+/dist*
+/dist/*

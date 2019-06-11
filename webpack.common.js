@@ -1,13 +1,13 @@
 const path = require('path');
-const ImageminWebpWebpackPlugin= require("imagemin-webp-webpack-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const webpack = require('webpack');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+// const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
 
 const isDevelopment = process.env.NODE_ENV !== 'production';
 
-// conditional logic to determine which firebase database to use, test or main
+// conditional logic to determine which firebase database credentials to use, test or main
 process.env.NODE_ENV = process.env.NODE_ENV || 'development'
 if (process.env.NODE_ENV === 'test') {
   require('dotenv').config({ path: '.env.test' });
@@ -18,22 +18,20 @@ if (process.env.NODE_ENV === 'test') {
 module.exports = {
   entry: './src/index.js',
   devServer: {
-    contentBase: './dist',
+    // contentBase: './dist',
     // serves up index.html in the dist folder every time there is a 404
-    historyApiFallback: true,
+    historyApiFallback: true
   },
   module: {
     rules: [
       {
-        test: /\.js$/,
-        exclude: /(node_modules)/,
-        use: {
-          loader: 'babel-loader',
+        test: /\.html$/,
+        use: [{
+          loader: 'html-loader',
           options: {
-            presets: ['@babel/preset-env', '@babel/preset-react'],
-            plugins: ['@babel/plugin-proposal-class-properties']
+            minimize: true
           }
-        }
+        }]
       },
       {
         test: /\.(sa|sc|c)ss$/,
@@ -47,8 +45,8 @@ module.exports = {
         test: /\.(gif|png|jpe?g|svg)$/i,
         use: [
           {
-            // loaders (plural) uses with array to enable smart merge with production
-            loaders: ['file-loader'],
+            // loaders (plural) used with array to enable smart merge with production -- ???
+            loader: 'file-loader',
             options: {
               name: isDevelopment ? '[name].[ext]' : 'images/[name].[hash].[ext]'
             }
@@ -65,25 +63,38 @@ module.exports = {
             }
           }
         ]
+      },
+      {
+        test: /\.js$/,
+        exclude: /(node_modules)/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env', '@babel/preset-react'],
+            plugins: ['@babel/plugin-proposal-class-properties']
+          }
+        }
       }
     ]
   },
   plugins: [
     // cleans up dist folder on new build or dev-server start
     new CleanWebpackPlugin(),
-    // generates html file from template (or automatically from JS)
+    // generates html file from template (or automatically from JS) with all asset imports
     new HtmlWebpackPlugin({
       title: 'React Boilerplate',
       filename: 'index.html',
       template: './src/index.html',
       inject: 'head'
     }),
-    new MiniCssExtractPlugin({
-      filename: isDevelopment ? '[name].css' : 'styles/[name].[hash].css',
-      chunkFilename: isDevelopment ? '[id].css' : 'styles/[id].[hash].css'
+    // modify loading order of js - can lead to faster page load time by avoiding render-blocking requests
+    new ScriptExtHtmlWebpackPlugin({
+      defaultAttribute: 'defer'
     }),
-    // Converts images to the WebP format while also keeping the original files
-    new ImageminWebpWebpackPlugin(),
+    // new MiniCssExtractPlugin({
+    //   filename: isDevelopment ? '[name].css' : 'styles/[name].[hash].css',
+    //   chunkFilename: isDevelopment ? '[id].css' : 'styles/[id].[hash].css'
+    // }),
     // uses env to point to environmental variables
     new webpack.DefinePlugin({
       'process.env.FIREBASE_API_KEY': JSON.stringify(process.env.FIREBASE_API_KEY),
@@ -96,7 +107,7 @@ module.exports = {
     })
   ],
   output: {
-    filename: 'scripts/[name].[hash].js',
+    filename: isDevelopment ? '[name].js' : 'scripts/[name].[hash].js',
     path: path.resolve(__dirname, 'dist')
   },
 };

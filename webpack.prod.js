@@ -1,5 +1,6 @@
 const merge = require('webpack-merge');
 const common = require('./webpack.common');
+const ImageminWebpWebpackPlugin= require("imagemin-webp-webpack-plugin");
 
 module.exports = merge.smart(common, {
   mode: 'production',
@@ -7,7 +8,7 @@ module.exports = merge.smart(common, {
   test: /\.(gif|png|jpe?g|svg)$/i,
   use: [
     {
-      // loaders (plural) uses with array to enable smart merge with file-loader rule from common
+      // loaders (plural) used with array to enable smart merge with file-loader rule from common
       loaders: ['image-webpack-loader'],
       options: {
         // mozjpeg: lossy jpg compressor
@@ -31,4 +32,8 @@ module.exports = merge.smart(common, {
       }
     },
   ],
+  plugins: [
+    // Converts images to the WebP format while also keeping the original files
+    new ImageminWebpWebpackPlugin()
+  ]
 });

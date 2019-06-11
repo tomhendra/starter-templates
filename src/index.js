@@ -4,9 +4,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import AppRouter, { history } from './routers/AppRouter';
-import configureStore from './store/configureStore';
-import { login, logout } from './actions/auth';
+import configureStore from './redux/store/configureStore';
+import { login, logout } from './redux/actions/auth';
 import { firebase } from './firebase/firebase';
+import LoadingPage from './components/LoadingPage';
 
 import 'normalize.css/normalize.css';
 import './index.scss';

@@ -2,14 +2,6 @@ const webpack = require('webpack');
 
 const paths = require('./paths');
 
-// conditional logic to determine which firebase database credentials to use, test or main
-process.env.NODE_ENV = process.env.NODE_ENV || 'development'
-if (process.env.NODE_ENV === 'test') {
-  require('dotenv').config({ path: '.env.test' });
-} else if (process.env.NODE_ENV === 'development') {
-  require('dotenv').config({ path: '.env.development' });
-}
-
 module.exports = {
   mode: 'development',
   output: {
@@ -48,7 +40,7 @@ module.exports = {
           // compiles Sass to CSS, using Node Sass by default
           'sass-loader',
         ],
-      },
+      }
     ],
   },
   devServer: {

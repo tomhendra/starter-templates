@@ -6,7 +6,7 @@
 
 # environmental variables
 .env.test
-.env.development
+.env.dev
 
 # Test
 coverage

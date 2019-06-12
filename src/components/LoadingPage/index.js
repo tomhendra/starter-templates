@@ -4,7 +4,7 @@ import style from './LoadingPage.scss';
 
 const LoadingPage = () => (
   <div className={style['loader']}>
-    <img className={style['loader__image']} src="../../assets/images/loader.gif" />
+    <img src={require('../../assets/images/loader.gif')} className={style['loader__image']} />
   </div>
 );
 

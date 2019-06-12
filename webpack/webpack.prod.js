@@ -65,11 +65,15 @@ module.exports = {
       {
         test: /\.(gif|png|jpe?g|svg)$/i,
         use: [
-          'file-loader',
+          {
+            loader: 'file-loader',
+            options: {
+              outputPath: paths.imagesDir
+            }
+          },
           {
             loader: 'image-webpack-loader',
             options: {
-              outputPath: paths.imagesDir,
               // mozjpeg: lossy jpg compressor
               mozjpeg: {
                 progressive: true,
@@ -97,8 +101,8 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
-      filename: `${paths.cssDir}/[name].css`,
-      chunkFilename: `${paths.cssDir}/[name].css`,
+      filename: `${paths.cssDir}/[name].[hash].css`,
+      chunkFilename: `${paths.cssDir}/[name].[hash].css`,
     }),
     // Converts images to the WebP format while also keeping the original files
     new ImageminWebpWebpackPlugin()

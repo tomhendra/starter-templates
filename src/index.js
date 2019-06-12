@@ -10,7 +10,7 @@ import { firebase } from './firebase/firebase';
 import LoadingPage from './components/LoadingPage';
 
 import 'normalize.css/normalize.css';
-import './index.scss';
+import './assets/styles';
 
 const store = configureStore();
 const jsx = (

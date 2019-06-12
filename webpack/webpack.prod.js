@@ -47,12 +47,29 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.(sa|sc|c)ss$/,
+        use: [
+          MiniCssExtractPlugin.loader,
+          {
+            loader: 'css-loader',
+            options: {
+              sourceMap: false,
+              modules: true,
+              camelCase: true,
+              localIdentName: '[local]___[hash:base64:5]',
+            },
+          },
+          'sass-loader',
+        ],
+      },
+      {
         test: /\.(gif|png|jpe?g|svg)$/i,
         use: [
           'file-loader',
           {
             loader: 'image-webpack-loader',
             options: {
+              outputPath: paths.imagesDir,
               // mozjpeg: lossy jpg compressor
               mozjpeg: {
                 progressive: true,
@@ -72,25 +89,9 @@ module.exports = {
                 interlaced: false,
               }
             }
-          },
+          }
         ]
-      },
-      {
-        test: /\.(css|scss)$/,
-        use: [
-          MiniCssExtractPlugin.loader,
-          {
-            loader: 'css-loader',
-            options: {
-              sourceMap: false,
-              modules: true,
-              camelCase: true,
-              localIdentName: '[local]___[hash:base64:5]',
-            },
-          },
-          'sass-loader',
-        ],
-      },
+      }
     ],
   },
   plugins: [

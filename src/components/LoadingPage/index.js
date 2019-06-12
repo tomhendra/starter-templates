@@ -1,9 +1,10 @@
 // entry point for importing your Component. It contains nothing but an export statement that points to the topmost Component at any point in time, because the topmost Component changes often during development.
 import React from 'react';
+import style from './LoadingPage.scss';
 
 const LoadingPage = () => (
-  <div className="loader">
-    <img className="loader__image" src="/src/assets/images/loader.gif" />
+  <div className={style['loader']}>
+    <img className={style['loader__image']} src="../../assets/images/loader.gif" />
   </div>
 );
 

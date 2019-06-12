@@ -1,1 +1,15 @@
 // straight-forward Sass file imported by stateless view Component.
+@import '../../assets/styles/base/settings';
+
+.loader {
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  width: 100vw;
+}
+
+.loader__image {
+  height: 6rem;
+  width: 6rem;
+}

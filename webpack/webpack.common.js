@@ -24,18 +24,6 @@ module.exports = {
         ]
       },
       {
-        test: /\.html$/,
-        use: [
-          {
-            // Exports HTML as string & minimize output
-            loader: 'html-loader',
-            options: {
-              minimize: true
-            }
-          }
-        ]
-      },
-      {
         test: /\.(woff|woff2|eot|ttf|otf)$/,
         use: [
           {

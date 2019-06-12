@@ -5,8 +5,7 @@
 .DS_Store
 
 # environmental variables
-.env.test
-.env.dev
+.env/
 
 # Test
 coverage

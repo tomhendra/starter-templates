@@ -12,17 +12,6 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(gif|png|jpe?g|svg)$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              outputPath: paths.imagesDir
-            }
-          }
-        ]
-      },
-      {
         test: /\.(sa|sc|c)ss$/,
         use: [
           // creates style nodes from JS strings
@@ -40,8 +29,19 @@ module.exports = {
           // compiles Sass to CSS, using Node Sass by default
           'sass-loader',
         ],
+      },
+      {
+        test: /\.(gif|png|jpe?g|svg)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              outputPath: paths.imagesDir
+            }
+          }
+        ]
       }
-    ],
+    ]
   },
   devServer: {
     contentBase: paths.outputPath,

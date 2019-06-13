@@ -1,8 +1,6 @@
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
-const convert = require('koa-connect');
-const history = require('connect-history-api-fallback');
 
 const paths = require('./paths');
 
@@ -36,29 +34,22 @@ module.exports = {
       }
     ]
   },
-  serve: {
-    add: app => {
-      app.use(convert(history()));
-    },
-    content: paths.entryPath,
-    dev: {
-      publicPath: paths.outputPath,
-    },
-    open: true,
-  },
+  // specifies where webpack looks for files & which extensions
   resolve: {
     modules: ['src', 'node_modules'],
     extensions: ['*', '.js', '.jsx', '.css', '.scss'],
   },
   plugins: [
+    // output progress of webpack compilation in terminal
     new webpack.ProgressPlugin(),
-    // generates html file from template (or automatically from JS) with all asset imports
+    // generates html file from template (or automatically from JS)
     new HtmlWebpackPlugin({
       template: paths.templatePath,
       inject: 'head'
     }),
-    // can lead to faster page load time
+    // modifying script loading order can lead to faster page load time by avoiding render-blocking requests. 
     new ScriptExtHtmlWebpackPlugin({
+      // async and defer load in parallel with HTML parsing. Async scripts will execute immediately after their load is complete, while deferred scripts will wait for the HTML parsing to complete then be executed in their respective order.
       defaultAttribute: 'async',
     })
   ]

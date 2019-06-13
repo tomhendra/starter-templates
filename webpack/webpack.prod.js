@@ -1,7 +1,7 @@
 const TerserPlugin = require('terser-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-const ImageminWebpWebpackPlugin= require("imagemin-webp-webpack-plugin");
+const ImageminWebpWebpackPlugin = require("imagemin-webp-webpack-plugin");
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 const paths = require('./paths');
@@ -14,14 +14,18 @@ module.exports = {
     chunkFilename: `${paths.jsDir}/[name].[chunkhash].js`,
   },
   optimization: {
+    // override the default minimizer by providing different one or more customized TerserPlugin instances.
     minimizer: [
+      // TerserPlugin plugin uses terser to minify JavaScript
       new TerserPlugin({
-        // Use multi-process parallel running to improve the build speed
+        // use multi-process parallel running to improve the build speed
         parallel: true,
-        // Enable file caching
+        // enable file caching
         cache: true,
+        // use source maps to map error message locations to modules
         sourceMap: true,
       }),
+      // search for CSS assets during Webpack build and optimize \ minimize CSS
       new OptimizeCSSAssetsPlugin(),
     ],
     // Automatically split vendor and commons
@@ -49,6 +53,7 @@ module.exports = {
       {
         test: /\.(sa|sc|c)ss$/,
         use: [
+          //  extracts CSS into separate files & creates a CSS file per JS file which contains CSS
           MiniCssExtractPlugin.loader,
           {
             loader: 'css-loader',
@@ -72,6 +77,7 @@ module.exports = {
             }
           },
           {
+            // Minify PNG, JPEG, GIF, SVG and WEBP images with imagemin
             loader: 'image-webpack-loader',
             options: {
               // mozjpeg: lossy jpg compressor
@@ -81,7 +87,7 @@ module.exports = {
               },
               // optipng: enabled by default. Quality > pngquant but compression < pngquant
               optipng: {
-                enabled: false,
+                enabled: false
               },
               // lossy png compressor
               pngquant: {
@@ -90,22 +96,25 @@ module.exports = {
               },
               // lossless gif compressor
               gifsicle: {
-                interlaced: false,
+                interlaced: false
               }
             }
           }
         ]
       }
-    ],
+    ]
   },
   plugins: [
+    // clears dist folder on new build
     new CleanWebpackPlugin(),
+    //  extracts CSS into separate files & creates a CSS file per JS file which contains CSS
     new MiniCssExtractPlugin({
       filename: `${paths.cssDir}/[name].[hash].css`,
-      chunkFilename: `${paths.cssDir}/[name].[hash].css`,
+      chunkFilename: `${paths.cssDir}/[name].[hash].css`
     }),
     // Converts images to the WebP format while also keeping the original files
     new ImageminWebpWebpackPlugin()
   ],
-  devtool: 'source-map',
+  // full, separated source map for production - will not be served unless requested
+  devtool: 'source-map'
 };

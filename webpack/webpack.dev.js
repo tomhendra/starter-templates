@@ -7,28 +7,29 @@ module.exports = {
   output: {
     filename: '[name].js',
     path: paths.outputDir,
-    chunkFilename: '[name].js',
+    chunkFilename: '[name].js'
   },
   module: {
     rules: [
       {
         test: /\.(sa|sc|c)ss$/,
+        // loaders are executed from right to left (bottom-to-top)
         use: [
-          // creates style nodes from JS strings
+          // 3. creates style nodes from JS strings; outputs CSS into <style> tags
           'style-loader', 
           {
-            // translates CSS into CommonJS
+            // 2. translates CSS into CommonJS; parses the CSS into JavaScript and resolves any dependencies.
             loader: 'css-loader', 
             options: {
               sourceMap: true,
               modules: true,
               camelCase: true,
-              localIdentName: '[local]___[hash:base64:5]',
-            },
+              localIdentName: '[local]___[hash:base64:5]'
+            }
           },
-          // compiles Sass to CSS, using Node Sass by default
+          // 1. compiles Sass to CSS, using Node Sass by default
           'sass-loader',
-        ],
+        ]
       },
       {
         test: /\.(gif|png|jpe?g|svg)$/,
@@ -45,11 +46,15 @@ module.exports = {
   },
   devServer: {
     contentBase: paths.outputPath,
+    // enable gzip compression for everything served
     compress: true,
-    hot: true,
+    // enable Hot Module Replacement (HMR) feature
+    hot: true
   },
   plugins: [
+    // HMR allows all kinds of modules to be updated at runtime without the need for a full refresh
     new webpack.HotModuleReplacementPlugin(),
+    // define firebase auth with environmental variables using process.env
     new webpack.DefinePlugin({
       'process.env.FIREBASE_API_KEY': JSON.stringify(process.env.FIREBASE_API_KEY),
       'process.env.FIREBASE_AUTH_DOMAIN': JSON.stringify(process.env.FIREBASE_AUTH_DOMAIN),
@@ -60,5 +65,6 @@ module.exports = {
       'process.env.FIREBASE_APP_ID': JSON.stringify(process.env.FIREBASE_APP_ID)
     })
   ],
-  devtool: 'inline-source-map',
+  // lighter weight source map for dev - more efficient to use inline since webpack will have less file to resolve and read
+  devtool: 'inline-source-map'
 };

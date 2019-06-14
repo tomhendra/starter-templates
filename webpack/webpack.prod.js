@@ -51,6 +51,18 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.html$/,
+        use: [
+          {
+            // minify HTML
+            loader: 'html-loader',
+            options: {
+              minimize: true
+            }
+          }
+        ]
+      },
+      {
         test: /\.(sa|sc|c)ss$/,
         use: [
           //  extracts CSS into separate files & creates a CSS file per JS file which contains CSS
@@ -62,10 +74,10 @@ module.exports = {
               modules: true,
               camelCase: true,
               localIdentName: '[local]___[hash:base64:5]',
-            },
+            }
           },
           'sass-loader',
-        ],
+        ]
       },
       {
         test: /\.(gif|png|jpe?g|svg)$/i,

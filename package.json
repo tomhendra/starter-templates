@@ -5,10 +5,11 @@
   "main": "index.js",
   "private": true,
   "scripts": {
-    "start": "cross-env NODE_ENV=development webpack-dev-server --open 'Google Chrome'",
-    "build": "cross-env NODE_ENV=production webpack",
+    "start:dev": "cross-env NODE_ENV=development webpack-dev-server --open 'Google Chrome'",
+    "build:dev": "cross-env NODE_ENV=production webpack",
     "test": "cross-env NODE_ENV=test jest --config=jest.config.json --watchAll --coverage",
-    "serve": "node server/server.js",
+    "build": "webpack",
+    "start": "node server/server.js",
     "heroku-postbuild": "npm run build"
   },
   "keywords": [],

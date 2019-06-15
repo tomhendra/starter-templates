@@ -63,7 +63,22 @@ module.exports = {
         ]
       },
       {
-        test: /\.(sa|sc|c)ss$/,
+        // vendor css rule
+        test: /node_modules\/.*\.css$/,
+        use: [
+          MiniCssExtractPlugin.loader,
+          {
+            loader: 'css-loader',
+            options: {
+              sourceMap: false
+            }
+          }
+        ]
+      },
+      {
+        // css modules rule
+        test: /\.scss/,
+        exclude: /node_modules/,
         use: [
           //  extracts CSS into separate files & creates a CSS file per JS file which contains CSS
           MiniCssExtractPlugin.loader,

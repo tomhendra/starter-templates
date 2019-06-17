@@ -1,0 +1,46 @@
+# System
+*~
+*#
+.#*
+.DS_Store
+.AppleDouble
+.LSOverride
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Serverless directories
+.serverless/
+
+# environmental variables
+.env/
+
+# Test
+coverage
+.eslintcache
+
+# Logs
+*.log
+
+# npm 
+node_modules/
+.npm
+npm-debug.log*
+
+# Diagnostic reports (https://nodejs.org/api/report.html)
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
+# package-lock.json
+/dist/bundle.js
+/dist/index.html
+/dist*
+/dist/*

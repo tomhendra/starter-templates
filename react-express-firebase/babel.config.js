@@ -13,11 +13,11 @@ module.exports = function(api) {
     '@babel/preset-react',
   ];
   const plugins = [
-    '@babel/transform-react-constant-elements',
-    '@babel/transform-react-inline-elements',
-    'transform-react-remove-prop-types',
-    'transform-react-pure-class-to-function',
-    '@babel/plugin-transform-runtime',
+    // '@babel/transform-react-constant-elements',
+    // '@babel/transform-react-inline-elements',
+    // 'transform-react-remove-prop-types',
+    // 'transform-react-pure-class-to-function',
+    // '@babel/plugin-transform-runtime',
     'react-hot-loader/babel',
 
     // Stage 2 https://github.com/babel/babel/tree/master/packages/babel-preset-stage-2

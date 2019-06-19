@@ -24,9 +24,12 @@ module.exports = {
             loader: 'css-loader',
             options: {
               sourceMap: true,
-              modules: true,
-              camelCase: true,
-              localIdentName: '[local]___[hash:base64:5]'
+              modules: {
+                mode: 'local',
+                localIdentName: '[path][name]__[local]--[hash:base64:5]',
+                context: paths.src,
+              },
+              localsConvention: 'camelCase',
             }
           },
           // 1. compiles Sass to CSS, using Node Sass by default

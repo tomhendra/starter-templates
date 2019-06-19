@@ -1,44 +1,43 @@
-/* roboto-regular - latin */
 @font-face {
-  font-family: 'Roboto';
+  font-family: 'SourceSansPro-Regular';
   font-display: fallback;
-  font-style: normal;
   font-weight: 400;
-  src: local('Roboto'), local('Roboto-Regular'),
-       url('/src/assets/fonts/roboto-v19-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-       url('/src/assets/fonts/roboto-v19-latin-regular.woff') format('woff'), /* Modern Browsers */
-       url('/src/assets/fonts/roboto-v19-latin-regular.ttf') format('ttf'), /* Safari, Android, iOS */
-}
-/* roboto-italic - latin */
-@font-face {
-  font-family: 'Roboto';
-  font-display: fallback;
-  font-style: italic;
-  font-weight: 400;
-  src: local('Roboto Italic'), local('Roboto-Italic'),
-       url('/src/assets/fonts/roboto-v19-latin-italic.woff2') format('woff2'), /* Super Modern Browsers */
-       url('/src/assets/fonts/roboto-v19-latin-italic.woff') format('woff'), /* Modern Browsers */
-       url('/src/assets/fonts/roboto-v19-latin-italic.ttf') format('ttf'), /* Safari, Android, iOS */
-}
-/* roboto-700 - latin */
-@font-face {
-  font-family: 'Roboto';
-  font-display: fallback;
   font-style: normal;
-  font-weight: 700;
-  src: local('Roboto Bold'), local('Roboto-Bold'),
-       url('/src/assets/fonts/roboto-v19-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
-       url('/src/assets/fonts/roboto-v19-latin-700.woff') format('woff'), /* Modern Browsers */
-       url('/src/assets/fonts/roboto-v19-latin-700.ttf') format('ttf'), /* Safari, Android, iOS */
+  src:
+    local('Source Sans Pro'), /* Checks if font is on users computer */
+    local('SourceSansPro-Regular'), /* Checks if font is on users computer */
+    url('/src/fonts/SourceSansPro-Regular.ttf') format('ttf'), 
 }
-/* roboto-700italic - latin */
+
 @font-face {
-  font-family: 'Roboto';
+  font-family: 'SourceSansPro-Italic';
   font-display: fallback;
+  font-weight: 400;
   font-style: italic;
+  src:
+    local('Source Sans Pro'), /* Checks if font is on users computer */
+    local('SourceSansPro-Italic'), /* Checks if font is on users computer */
+    url('/src/fonts/SourceSansPro-Italic.ttf') format('ttf'), 
+}
+
+@font-face {
+  font-family: 'SourceSansPro-Bold';
+  font-display: fallback;
   font-weight: 700;
-  src: local('Roboto Bold Italic'), local('Roboto-BoldItalic'),
-       url('/src/assets/fonts/roboto-v19-latin-700italic.woff2') format('woff2'), /* Super Modern Browsers */
-       url('/src/assets/fonts/roboto-v19-latin-700italic.woff') format('woff'), /* Modern Browsers */
-       url('/src/assets/fonts/roboto-v19-latin-700italic.ttf') format('ttf'), /* Safari, Android, iOS */
+  font-style: normal;
+  src:
+    local('Source Sans Pro'), /* Checks if font is on users computer */
+    local('SourceSansPro-Bold'), /* Checks if font is on users computer */
+    url('/src/fonts/SourceSansPro-Bold.ttf') format('ttf'), 
+}
+
+@font-face {
+  font-family: 'SourceSansPro-BoldItalic';
+  font-display: fallback;
+  font-weight: 700;
+  font-style: italic;
+  src:
+    local('Source Sans Pro'), /* Checks if font is on users computer */
+    local('SourceSansPro-BoldItalic'), /* Checks if font is on users computer */
+    url('/src/fonts/SourceSansPro-BoldItalic.ttf') format('ttf'), 
 }

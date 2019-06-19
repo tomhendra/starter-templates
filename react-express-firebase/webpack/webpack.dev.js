@@ -12,21 +12,6 @@ module.exports = {
   module: {
     rules: [
       {
-        // vendor css rule
-        test: /node_modules\/.*\.css$/,
-        use: [
-          {
-            loader: 'style-loader',
-          },
-          {
-            loader: 'css-loader',
-            options: {
-              sourceMap: true,
-            },
-          },
-        ],
-      },
-      {
         // css modules rule
         test: /\.scss/,
         // loaders are executed from right to left (bottom-to-top)
@@ -49,6 +34,21 @@ module.exports = {
         ]
       },
       {
+        // vendor css rule
+        test: /node_modules\/.*\.css$/,
+        use: [
+          {
+            loader: 'style-loader',
+          },
+          {
+            loader: 'css-loader',
+            options: {
+              sourceMap: true,
+            },
+          },
+        ],
+      },
+      {
         test: /\.(gif|png|jpe?g|svg)$/,
         use: [
           {
@@ -66,7 +66,9 @@ module.exports = {
     // enable gzip compression for everything served
     compress: true,
     // enable Hot Module Replacement (HMR) feature
-    hot: true
+    hot: true,
+    // redirects to index.html on server request for page
+    historyApiFallback: true
   },
   plugins: [
     // HMR allows all kinds of modules to be updated at runtime without the need for a full refresh

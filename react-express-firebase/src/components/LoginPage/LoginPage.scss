@@ -1,19 +1,18 @@
-// straight-forward Sass file imported by stateless view Component.
-@import '../../assets/styles/base/settings';
+@import './src/assets/styles/base/settings';
 
 .box-layout {
-  align-items: center;
   background: url('../../assets/images/bg.jpg');
-  background-size: cover;
   display: flex;
-  height: 100vh;
   justify-content: center;
+  align-items: center;
+  background-size: cover;
+  height: 100vh;
   width: 100vw;
 }
 
 .box-layout__box {
-  background: fade-out(white, .15);
   border-radius: 3px;
+  background: fade-out(white, .15);
   padding: $l-size $m-size;
   text-align: center;
   width: 25rem;
@@ -28,18 +27,7 @@
   background: $blue;
   border: none;
   color: white;
-  display: inline-block;
   font-size: $font-size-large;
   font-weight: 300;
-  line-height: 1;
   padding: $s-size;
-  text-decoration: none;
-}
-
-.button--link {
-  background: none;
-}
-
-.button--secondary {
-  background: #888;
 }

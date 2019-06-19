@@ -3,6 +3,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const ImageminWebpWebpackPlugin = require("imagemin-webp-webpack-plugin");
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const webpack = require('webpack');
 
 const paths = require('./paths');
 
@@ -63,19 +64,6 @@ module.exports = {
         ]
       },
       {
-        // vendor css rule
-        test: /node_modules\/.*\.css$/,
-        use: [
-          MiniCssExtractPlugin.loader,
-          {
-            loader: 'css-loader',
-            options: {
-              sourceMap: false
-            }
-          }
-        ]
-      },
-      {
         // css modules rule
         test: /\.scss/,
         exclude: /node_modules/,
@@ -92,6 +80,19 @@ module.exports = {
             }
           },
           'sass-loader',
+        ]
+      },
+      {
+        // vendor css rule
+        test: /node_modules\/.*\.css$/,
+        use: [
+          MiniCssExtractPlugin.loader,
+          {
+            loader: 'css-loader',
+            options: {
+              sourceMap: false
+            }
+          }
         ]
       },
       {
@@ -134,13 +135,22 @@ module.exports = {
   plugins: [
     // clears dist folder on new build
     new CleanWebpackPlugin(),
+    // Converts images to the WebP format while also keeping the original files
+    new ImageminWebpWebpackPlugin(),
     //  extracts CSS into separate files & creates a CSS file per JS file which contains CSS
     new MiniCssExtractPlugin({
       filename: `${paths.cssDir}/[name].[hash].css`,
       chunkFilename: `${paths.cssDir}/[name].[hash].css`
     }),
-    // Converts images to the WebP format while also keeping the original files
-    new ImageminWebpWebpackPlugin()
+    new webpack.DefinePlugin({
+      'process.env.FIREBASE_API_KEY': JSON.stringify(process.env.FIREBASE_API_KEY),
+      'process.env.FIREBASE_AUTH_DOMAIN': JSON.stringify(process.env.FIREBASE_AUTH_DOMAIN),
+      'process.env.FIREBASE_DATABASE_URL': JSON.stringify(process.env.FIREBASE_DATABASE_URL),
+      'process.env.FIREBASE_PROJECT_ID': JSON.stringify(process.env.FIREBASE_PROJECT_ID),
+      'process.env.FIREBASE_STORAGE_BUCKET': JSON.stringify(process.env.FIREBASE_STORAGE_BUCKET),
+      'process.env.FIREBASE_MESSAGING_SENDER': JSON.stringify(process.env.FIREBASE_MESSAGING_SENDER),
+      'process.env.FIREBASE_APP_ID': JSON.stringify(process.env.FIREBASE_APP_ID)
+    })
   ],
   // full, separated source map for production - will not be served unless requested
   devtool: 'source-map'

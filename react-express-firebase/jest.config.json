@@ -1,7 +1,27 @@
 {
+  "testEnvironment": "jsdom",
+  "moduleDirectories": [
+    "src",
+    "node_modules"
+  ],
+  "moduleNameMapper": {
+    "\\.(css|scss)$": "<rootDir>/src/tests/__mocks__/styleMock.js",
+    "\\.(jpg|gif|ttf|eot|svg)$": "<rootDir>src/tests/__mocks__/fileMock.js"
+  },
+  "transform": {
+    "^.+\\.(js|jsx)$": "babel-jest",
+    ".+\\.(css|styl|less|sass|scss)$": "<rootDir>/node_modules/jest-css-modules-transform"
+  },
   "setupFiles": [
     "raf/polyfill",
-    "<rootDir>/src/tests/setupTests.js"
+    "<rootDir>setupTests.js"
+  ],
+  "moduleFileExtensions": [
+    "css",
+    "scss",
+    "js",
+    "json",
+    "jsx"
   ],
   "snapshotSerializers": [
     "enzyme-to-json/serializer"

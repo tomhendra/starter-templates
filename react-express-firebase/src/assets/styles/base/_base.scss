@@ -4,12 +4,12 @@
 
 html {
   font-size: 62.5%;
+  box-sizing: border-box;
 }
 
 body {
   color: $dark-grey;
-  font-family: 'Roboto', Fallback, 'Helvetica', 'Arial', sans-serif;
-  font-weight: 400;
+  font-family: 'SourceSansPro', Fallback, 'Helvetica', 'Arial', sans-serif;
   font-size: $m-size;
   line-height: 1.6;
 }

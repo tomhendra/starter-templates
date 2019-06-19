@@ -1,15 +1,7 @@
-// straight-forward Sass file imported by stateless view Component.
 @import '../../assets/styles/base/settings';
 
 .header {
   background: $dark-blue;
-}
-
-.header__content {
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
-  padding: $s-size 0;
 }
 
 .header__title {
@@ -20,24 +12,28 @@
   }
 }
 
-.content-container {
-  margin: 0 auto;
-  padding: 0 $m-size;
-  max-width: 80rem;
+.header__content {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: $s-size 0;
 }
 
-.button {
-  background: $blue;
+.header__button {
+  background: none;
   border: none;
   color: white;
   display: inline-block;
   font-size: $font-size-large;
-  font-weight: 300;
   line-height: 1;
+  font-weight: 300;
   padding: $s-size;
   text-decoration: none;
 }
 
-.button--link {
-  background: none;
+.content-container {
+  margin: 0 auto;
+  max-width: 80rem;
+  padding: 0 $m-size;
 }
+

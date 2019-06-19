@@ -29,7 +29,6 @@ module.exports = {
                 localIdentName: '[path][name]__[local]--[hash:base64:5]',
                 context: paths.src,
               },
-              localsConvention: 'camelCase',
             }
           },
           // 1. compiles Sass to CSS, using Node Sass by default

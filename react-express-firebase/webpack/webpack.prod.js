@@ -77,10 +77,8 @@ module.exports = {
               modules: {
                 mode: 'local',
                 localIdentName: '[path][name]__[local]--[hash:base64:5]',
-                localsConvention: 'camelCase',
                 context: paths.src,
               },
-              localsConvention: 'camelCase',
             }
           },
           'sass-loader',

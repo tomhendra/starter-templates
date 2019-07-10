@@ -1,7 +1,7 @@
 import React from 'react';
 
 import loaderImage from '../../assets/images/loader.gif';
-import style from './LoadingPage.scss';
+import style from './LoadingPage.module.scss';
 
 const LoadingPage = () => (
   <div className={style['loader']}>

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { startLogout } from '../../redux/actions/auth';
 
-import style from './Header.scss';
+import style from './Header.module.scss';
 
 export const Header = ({ startLogout }) => (
   <header className={style['header']}>

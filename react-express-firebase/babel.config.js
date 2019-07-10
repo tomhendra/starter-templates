@@ -1,3 +1,5 @@
+const isTest = String(process.env.NODE_ENV) === 'test'
+
 module.exports = function(api) {
   api.cache(true);
 
@@ -6,7 +8,7 @@ module.exports = function(api) {
       '@babel/preset-env',
       {
         targets: {
-          esmodules: true,
+          esmodules: isTest ? 'commonjs' : false,
         }
       }
     ],
@@ -15,8 +17,8 @@ module.exports = function(api) {
   const plugins = [
     // '@babel/transform-react-constant-elements',
     // '@babel/transform-react-inline-elements',
-    // 'transform-react-remove-prop-types',
     // 'transform-react-pure-class-to-function',
+    // 'transform-react-remove-prop-types',
     // '@babel/plugin-transform-runtime',
     'react-hot-loader/babel',
 

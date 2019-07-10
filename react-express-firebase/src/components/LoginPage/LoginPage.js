@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { startLogin } from '../../redux/actions/auth';
 
-import style from './LoginPage.scss';
+import style from './LoginPage.module.scss';
 
 export const LoginPage = ({ startLogin }) => (
   <div className={style['box-layout']}>

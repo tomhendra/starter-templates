@@ -1,18 +1,18 @@
-const TerserPlugin = require('terser-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const TerserPlugin = require("terser-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const ImageminWebpWebpackPlugin = require("imagemin-webp-webpack-plugin");
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const webpack = require('webpack');
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const webpack = require("webpack");
 
-const paths = require('./paths');
+const paths = require("./paths");
 
 module.exports = {
-  mode: 'production',
+  mode: "production",
   output: {
     filename: `${paths.jsDir}/[name].[hash].js`,
     path: paths.outputPath,
-    chunkFilename: `${paths.jsDir}/[name].[chunkhash].js`,
+    chunkFilename: `${paths.jsDir}/[name].[chunkhash].js`
   },
   optimization: {
     // override the default minimizer by providing different one or more customized TerserPlugin instances.
@@ -24,29 +24,29 @@ module.exports = {
         // enable file caching
         cache: true,
         // use source maps to map error message locations to modules
-        sourceMap: true,
+        sourceMap: true
       }),
       // search for CSS assets during Webpack build and optimise / minimize CSS
-      new OptimizeCSSAssetsPlugin(),
+      new OptimizeCSSAssetsPlugin()
     ],
     // Automatically split vendor and commons
     splitChunks: {
       cacheGroups: {
         vendors: {
           test: /[\\/]node_modules[\\/]/,
-          name: 'vendors',
-          chunks: 'initial',
+          name: "vendors",
+          chunks: "initial"
         },
         async: {
           test: /[\\/]node_modules[\\/]/,
-          name: 'async',
-          chunks: 'async',
-          minChunks: 4,
-        },
-      },
+          name: "async",
+          chunks: "async",
+          minChunks: 4
+        }
+      }
     },
     // Keep the runtime chunk separated to enable long term caching
-    runtimeChunk: true,
+    runtimeChunk: true
   },
 
   module: {
@@ -56,7 +56,7 @@ module.exports = {
         use: [
           {
             // minify HTML
-            loader: 'html-loader',
+            loader: "html-loader",
             options: {
               minimize: true
             }
@@ -71,17 +71,17 @@ module.exports = {
           //  extracts CSS into separate files & creates a CSS file per JS file which contains CSS
           MiniCssExtractPlugin.loader,
           {
-            loader: 'css-loader',
+            loader: "css-loader",
             options: {
               sourceMap: true,
               modules: {
-                mode: 'local',
-                localIdentName: '[path][name]__[local]--[hash:base64:5]',
-                context: paths.src,
-              },
+                mode: "local",
+                localIdentName: "[path][name]__[local]--[hash:base64:5]",
+                context: paths.src
+              }
             }
           },
-          'sass-loader',
+          "sass-loader"
         ]
       },
       {
@@ -90,7 +90,7 @@ module.exports = {
         use: [
           MiniCssExtractPlugin.loader,
           {
-            loader: 'css-loader',
+            loader: "css-loader",
             options: {
               sourceMap: false
             }
@@ -101,14 +101,14 @@ module.exports = {
         test: /\.(gif|png|jpe?g|svg)$/i,
         use: [
           {
-            loader: 'file-loader',
+            loader: "file-loader",
             options: {
               outputPath: paths.imagesDir
             }
           },
           {
             // Minify PNG, JPEG, GIF, SVG and WEBP images with imagemin
-            loader: 'image-webpack-loader',
+            loader: "image-webpack-loader",
             options: {
               // mozjpeg: lossy jpg compressor
               mozjpeg: {
@@ -121,7 +121,7 @@ module.exports = {
               },
               // lossy png compressor
               pngquant: {
-                quality: '75-90',
+                quality: "75-90",
                 speed: 4
               },
               // lossless gif compressor
@@ -146,15 +146,27 @@ module.exports = {
     }),
     // environmental variables setup for Firebase auth
     new webpack.DefinePlugin({
-      'process.env.FIREBASE_API_KEY': JSON.stringify(process.env.FIREBASE_API_KEY),
-      'process.env.FIREBASE_AUTH_DOMAIN': JSON.stringify(process.env.FIREBASE_AUTH_DOMAIN),
-      'process.env.FIREBASE_DATABASE_URL': JSON.stringify(process.env.FIREBASE_DATABASE_URL),
-      'process.env.FIREBASE_PROJECT_ID': JSON.stringify(process.env.FIREBASE_PROJECT_ID),
-      'process.env.FIREBASE_STORAGE_BUCKET': JSON.stringify(process.env.FIREBASE_STORAGE_BUCKET),
-      'process.env.FIREBASE_MESSAGING_SENDER': JSON.stringify(process.env.FIREBASE_MESSAGING_SENDER),
-      'process.env.FIREBASE_APP_ID': JSON.stringify(process.env.FIREBASE_APP_ID)
+      "process.env.FIREBASE_API_KEY": JSON.stringify(
+        process.env.FIREBASE_API_KEY
+      ),
+      "process.env.FIREBASE_AUTH_DOMAIN": JSON.stringify(
+        process.env.FIREBASE_AUTH_DOMAIN
+      ),
+      "process.env.FIREBASE_DATABASE_URL": JSON.stringify(
+        process.env.FIREBASE_DATABASE_URL
+      ),
+      "process.env.FIREBASE_PROJECT_ID": JSON.stringify(
+        process.env.FIREBASE_PROJECT_ID
+      ),
+      "process.env.FIREBASE_STORAGE_BUCKET": JSON.stringify(
+        process.env.FIREBASE_STORAGE_BUCKET
+      ),
+      "process.env.FIREBASE_MESSAGING_SENDER": JSON.stringify(
+        process.env.FIREBASE_MESSAGING_SENDER
+      ),
+      "process.env.FIREBASE_APP_ID": JSON.stringify(process.env.FIREBASE_APP_ID)
     })
   ],
   // full, separated source map for production - will not be served unless requested by browser dev tools
-  devtool: 'source-map'
+  devtool: "source-map"
 };

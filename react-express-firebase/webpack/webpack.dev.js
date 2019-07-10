@@ -1,14 +1,14 @@
-const webpack = require('webpack');
-require('dotenv').config({ path: `./.env/.env.dev` });
+const webpack = require("webpack");
+require("dotenv").config({ path: `./.env/.env.dev` });
 
-const paths = require('./paths');
+const paths = require("./paths");
 
 module.exports = {
-  mode: 'development',
+  mode: "development",
   output: {
-    filename: '[name].js',
+    filename: "[name].js",
     path: paths.outputDir,
-    chunkFilename: '[name].js'
+    chunkFilename: "[name].js"
   },
   module: {
     rules: [
@@ -19,21 +19,21 @@ module.exports = {
         exclude: /node_modules/,
         use: [
           // 3. creates style nodes from JS strings; outputs CSS into <style> tags
-          'style-loader',
+          "style-loader",
           {
             // 2. translates CSS into CommonJS; parses the CSS into JavaScript and resolves any dependencies
-            loader: 'css-loader',
+            loader: "css-loader",
             options: {
               sourceMap: true,
               modules: {
-                mode: 'local',
-                localIdentName: '[path][name]__[local]--[hash:base64:5]',
-                context: paths.src,
-              },
+                mode: "local",
+                localIdentName: "[path][name]__[local]--[hash:base64:5]",
+                context: paths.src
+              }
             }
           },
           // 1. compiles Sass to CSS, using Node Sass by default
-          'sass-loader',
+          "sass-loader"
         ]
       },
       {
@@ -41,21 +41,21 @@ module.exports = {
         test: /node_modules\/.*\.css$/,
         use: [
           {
-            loader: 'style-loader',
+            loader: "style-loader"
           },
           {
-            loader: 'css-loader',
+            loader: "css-loader",
             options: {
-              sourceMap: true,
-            },
-          },
-        ],
+              sourceMap: true
+            }
+          }
+        ]
       },
       {
         test: /\.(gif|png|jpe?g|svg)$/,
         use: [
           {
-            loader: 'file-loader',
+            loader: "file-loader",
             options: {
               outputPath: paths.imagesDir
             }
@@ -78,15 +78,27 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin(),
     // define firebase auth with environmental variables using process.env
     new webpack.DefinePlugin({
-      'process.env.FIREBASE_API_KEY': JSON.stringify(process.env.FIREBASE_API_KEY),
-      'process.env.FIREBASE_AUTH_DOMAIN': JSON.stringify(process.env.FIREBASE_AUTH_DOMAIN),
-      'process.env.FIREBASE_DATABASE_URL': JSON.stringify(process.env.FIREBASE_DATABASE_URL),
-      'process.env.FIREBASE_PROJECT_ID': JSON.stringify(process.env.FIREBASE_PROJECT_ID),
-      'process.env.FIREBASE_STORAGE_BUCKET': JSON.stringify(process.env.FIREBASE_STORAGE_BUCKET),
-      'process.env.FIREBASE_MESSAGING_SENDER': JSON.stringify(process.env.FIREBASE_MESSAGING_SENDER),
-      'process.env.FIREBASE_APP_ID': JSON.stringify(process.env.FIREBASE_APP_ID)
+      "process.env.FIREBASE_API_KEY": JSON.stringify(
+        process.env.FIREBASE_API_KEY
+      ),
+      "process.env.FIREBASE_AUTH_DOMAIN": JSON.stringify(
+        process.env.FIREBASE_AUTH_DOMAIN
+      ),
+      "process.env.FIREBASE_DATABASE_URL": JSON.stringify(
+        process.env.FIREBASE_DATABASE_URL
+      ),
+      "process.env.FIREBASE_PROJECT_ID": JSON.stringify(
+        process.env.FIREBASE_PROJECT_ID
+      ),
+      "process.env.FIREBASE_STORAGE_BUCKET": JSON.stringify(
+        process.env.FIREBASE_STORAGE_BUCKET
+      ),
+      "process.env.FIREBASE_MESSAGING_SENDER": JSON.stringify(
+        process.env.FIREBASE_MESSAGING_SENDER
+      ),
+      "process.env.FIREBASE_APP_ID": JSON.stringify(process.env.FIREBASE_APP_ID)
     })
   ],
   // lighter weight source map for dev - more efficient to use inline since webpack will have less file to resolve and read
-  devtool: 'inline-source-map'
+  devtool: "inline-source-map"
 };

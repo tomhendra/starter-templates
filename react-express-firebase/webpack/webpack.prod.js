@@ -26,7 +26,7 @@ module.exports = {
         // use source maps to map error message locations to modules
         sourceMap: true,
       }),
-      // search for CSS assets during Webpack build and optimize \ minimize CSS
+      // search for CSS assets during Webpack build and optimise / minimize CSS
       new OptimizeCSSAssetsPlugin(),
     ],
     // Automatically split vendor and commons
@@ -144,6 +144,7 @@ module.exports = {
       filename: `${paths.cssDir}/[name].[hash].css`,
       chunkFilename: `${paths.cssDir}/[name].[hash].css`
     }),
+    // environmental variables setup for Firebase auth
     new webpack.DefinePlugin({
       'process.env.FIREBASE_API_KEY': JSON.stringify(process.env.FIREBASE_API_KEY),
       'process.env.FIREBASE_AUTH_DOMAIN': JSON.stringify(process.env.FIREBASE_AUTH_DOMAIN),
@@ -154,6 +155,6 @@ module.exports = {
       'process.env.FIREBASE_APP_ID': JSON.stringify(process.env.FIREBASE_APP_ID)
     })
   ],
-  // full, separated source map for production - will not be served unless requested
+  // full, separated source map for production - will not be served unless requested by browser dev tools
   devtool: 'source-map'
 };

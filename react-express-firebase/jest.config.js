@@ -6,17 +6,17 @@ module.exports = {
   ],
   'moduleNameMapper': {
     '\\.module\\.(css|scss)$': 'identity-obj-proxy',
-    '\\.(css|scss)$': require.resolve('./src/tests/style.mock.js'),
-    '\\.(jpg|gif|ttf|eot|svg)$': require.resolve('./src/tests/file.mock.js')
+    '\\.(css|scss)$': require.resolve('./src/tests/styleMock.js'),
+    '\\.(jpg|gif|ttf|eot|svg)$': require.resolve('./src/tests/fileMock.js')
   },
   // 'transform': {
   //   '^.+\\.(js|jsx)$': 'babel-jest',
   //   '.+\\.(css|styl|less|sass|scss)$': '<rootDir>/node_modules/jest-css-modules-transform'
   // },
-  // 'setupFiles': [
-  //   'raf/polyfill',
-  //   '<rootDir>setupTests.js'
-  // ],
+  'setupFiles': [
+    'raf/polyfill',
+    '<rootDir>/src/tests/setupTests.js'
+  ],
   // 'moduleFileExtensions': [
   //   'css',
   //   'scss',

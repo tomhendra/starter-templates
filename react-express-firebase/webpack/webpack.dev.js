@@ -1,4 +1,5 @@
 const webpack = require('webpack');
+require('dotenv').config({ path: `./.env/.env.dev` });
 
 const paths = require('./paths');
 
@@ -20,7 +21,7 @@ module.exports = {
           // 3. creates style nodes from JS strings; outputs CSS into <style> tags
           'style-loader',
           {
-            // 2. translates CSS into CommonJS; parses the CSS into JavaScript and resolves any dependencies.
+            // 2. translates CSS into CommonJS; parses the CSS into JavaScript and resolves any dependencies
             loader: 'css-loader',
             options: {
               sourceMap: true,

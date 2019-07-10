@@ -4,7 +4,7 @@
   background: $dark-blue;
 }
 
-.header__title {
+.headerTitle {
   color: white;
   text-decoration: none;
   h1 {
@@ -12,14 +12,14 @@
   }
 }
 
-.header__content {
+.headerContent {
   align-items: center;
   display: flex;
   justify-content: space-between;
   padding: $s-size 0;
 }
 
-.header__button {
+.headerButton {
   background: none;
   border: none;
   color: white;
@@ -31,7 +31,7 @@
   text-decoration: none;
 }
 
-.content-container {
+.contentContainer {
   margin: 0 auto;
   max-width: 80rem;
   padding: 0 $m-size;

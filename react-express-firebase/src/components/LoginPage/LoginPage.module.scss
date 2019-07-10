@@ -1,6 +1,6 @@
 @import './src/assets/styles/base/settings';
 
-.box-layout {
+.boxLayout {
   background-image: url('../../assets/images/bg.jpg');
   display: flex;
   justify-content: center;
@@ -10,7 +10,7 @@
   width: 100vw;
 }
 
-.box-layout__box {
+.boxLayoutBox {
   border-radius: 3px;
   background: fade-out(white, .15);
   padding: $l-size $m-size;
@@ -18,7 +18,7 @@
   width: 25rem;
 }
 
-.box-layout__title {
+.boxLayoutTitle {
   margin: 0 0 $m-size 0;
   line-height: 1;
 }

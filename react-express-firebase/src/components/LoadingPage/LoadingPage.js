@@ -1,11 +1,11 @@
 import React from 'react';
 
 import loaderImage from '../../assets/images/loader.gif';
-import style from './LoadingPage.module.scss';
+import styles from './LoadingPage.module.scss';
 
 const LoadingPage = () => (
-  <div className={style['loader']}>
-    <img className={style['loader__image']} src={loaderImage} alt="Loader animation"></img>
+  <div className={styles.loader}>
+    <img className={styles.loaderImage} src={loaderImage} alt="Loader animation"></img>
   </div>
 );
 

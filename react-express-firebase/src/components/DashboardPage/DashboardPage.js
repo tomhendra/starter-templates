@@ -1,10 +1,10 @@
 
 import React from 'react';
 
-import style from './DashboardPage.module.scss';
+import styles from './DashboardPage.module.scss';
 
 const DashboardPage = () => (
-  <div className={style['dashboard-content']}>
+  <div className={styles.dashboardContent}>
     Dashboard page content...
   </div>
 );

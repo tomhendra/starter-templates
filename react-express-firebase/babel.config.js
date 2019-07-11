@@ -1,43 +1,26 @@
-const isTest = String(process.env.NODE_ENV) === 'test'
+const isTest = String(process.env.NODE_ENV) === "test";
 
 module.exports = function(api) {
   api.cache(true);
 
   const presets = [
     [
-      '@babel/preset-env',
+      "@babel/preset-env",
       {
         targets: {
-          esmodules: isTest ? 'commonjs' : false,
+          esmodules: isTest ? "commonjs" : false
         }
       }
     ],
-    '@babel/preset-react',
+    "@babel/preset-react"
   ];
   const plugins = [
-    // '@babel/transform-react-constant-elements',
-    // '@babel/transform-react-inline-elements',
-    // 'transform-react-pure-class-to-function',
-    // 'transform-react-remove-prop-types',
-    // '@babel/plugin-transform-runtime',
-    'react-hot-loader/babel',
-
-    // Stage 2 https://github.com/babel/babel/tree/master/packages/babel-preset-stage-2
-    // ['@babel/plugin-proposal-decorators', { legacy: true }],
-    // '@babel/plugin-proposal-function-sent',
-    // '@babel/plugin-proposal-export-namespace-from',
-    // '@babel/plugin-proposal-numeric-separator',
-    // '@babel/plugin-proposal-throw-expressions',
-
-    // // Stage 3
-    // '@babel/plugin-syntax-dynamic-import',
-    // '@babel/plugin-syntax-import-meta',
-    ['@babel/plugin-proposal-class-properties', { loose: true }],
-    // '@babel/plugin-proposal-json-strings',
-  ];
+    "react-hot-loader/babel",
+    "@babel/plugin-proposal-class-properties"
+  ].filter(Boolean);
 
   return {
     presets,
-    plugins,
+    plugins
   };
 };

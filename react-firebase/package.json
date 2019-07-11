@@ -1,13 +1,13 @@
 {
   "name": "react-express-firebase",
   "version": "1.0.0",
-  "description": "An expenses tracking app",
+  "description": "React boilerplate",
   "scripts": {
     "start:dev": "cross-env NODE_ENV=development webpack-dev-server --open 'Google Chrome'",
     "build:dev": "cross-env NODE_ENV=production webpack",
     "format": "prettier \"src/**/*.{js,html}\" --write",
     "lint": "eslint \"src/**/*.{js,jsx}\" --quiet",
-    "test": "cross-env NODE_ENV=test jest --config=jest.config.js --coverage --watch",
+    "test": "cross-env NODE_ENV=test jest --config=jest.config.js --watchAll --coverage",
     "report": "open -a 'Google Chrome' coverage/lcov-report/index.html",
     "deploy": "git subtree push --prefix expensify-app heroku master",
     "start": "node server/server.js",

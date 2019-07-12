@@ -1,17 +1,21 @@
 import React from "react";
-import { shallow } from "enzyme";
+import { render, fireEvent } from "@testing-library/react";
 import { LoginPage } from "./LoginPage";
 
-// TypeError: Cannot read property 'contextTypes' of undefined (at shallow)
-test("Should render login page correctly", () => {
-  const wrapper = shallow(<LoginPage />);
-  expect(wrapper).toMatchSnapshot();
-});
-
-// TypeError: Cannot read property 'contextTypes' of undefined (at shallow)
-test("Should call startLogin on button click", () => {
+test("should call startLogin on button click", () => {
+  // Arrange
   const startLogin = jest.fn();
-  const wrapper = shallow(<LoginPage startLogin={startLogin} />);
-  wrapper.find("button").simulate("click");
-  expect(startLogin).toHaveBeenCalled();
+  const { container, getByText } = render(
+    <LoginPage startLogin={startLogin} />
+  );
+  const leftClick = { button: 0 };
+  const loginButton = getByText(/Login with Google/i, leftClick);
+
+  // Act
+  fireEvent.click(loginButton);
+
+  // Assert
+  expect(container.innerHTML).toMatch("Login with Google");
+  expect(container).toMatchSnapshot();
+  expect(startLogin).toHaveBeenCalledTimes(1);
 });

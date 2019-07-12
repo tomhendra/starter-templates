@@ -1,9 +1,15 @@
 import React from "react";
-import { shallow } from "enzyme";
-import toJSON from "enzyme-to-json";
+import renderWithRouter from "../../testing/utils/renderWithRouter";
 import NotFoundPage from "./NotFoundPage";
 
 test("Should render NotFoundPage correctly", () => {
-  const wrapper = shallow(<NotFoundPage />);
-  expect(wrapper).toMatchSnapshot();
+  // Arrange
+  const { container, getByText } = renderWithRouter(<NotFoundPage />);
+  const notFoundDiv = getByText("Go home");
+
+  // Act
+
+  // Assert
+  expect(notFoundDiv.innerHTML).toBe("Go home");
+  expect(container).toMatchSnapshot();
 });

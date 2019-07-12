@@ -2,11 +2,13 @@
 
 exports[`Should render NotFoundPage correctly 1`] = `
 <div>
-  404 - 
-  <Link
-    to="/"
-  >
-    Go home
-  </Link>
+  <div>
+    404 - 
+    <a
+      href="/"
+    >
+      Go home
+    </a>
+  </div>
 </div>
 `;

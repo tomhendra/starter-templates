@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should call startLogin on button click 1`] = `
+<div>
+  <div
+    class="boxLayout"
+  >
+    <div
+      class="boxLayoutBox"
+    >
+      <h1
+        class="boxLayoutTitle"
+      >
+        React Boilerplate
+      </h1>
+      <p>
+        Insert tag line here...
+      </p>
+      <button
+        class="button"
+      >
+        Login with Google
+      </button>
+    </div>
+  </div>
+</div>
+`;

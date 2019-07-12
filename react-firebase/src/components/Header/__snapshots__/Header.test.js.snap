@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should call startLogout on button click 1`] = `
+<div>
+  <header
+    class="header"
+  >
+    <div
+      class="contentContainer"
+    >
+      <div
+        class="headerContent"
+      >
+        <a
+          class="headerTitle"
+          href="/dashboard"
+        >
+          <h1>
+            React boilerplate
+          </h1>
+        </a>
+        <button
+          class="headerButton"
+        >
+          Logout
+        </button>
+      </div>
+    </div>
+  </header>
+</div>
+`;

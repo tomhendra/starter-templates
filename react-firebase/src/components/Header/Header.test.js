@@ -1,6 +1,6 @@
 import React from "react";
 import { fireEvent } from "@testing-library/react";
-import renderWithRouter from "../../tests/utils/renderWithRouter";
+import renderWithRouter from "../../testing/utils/renderWithRouter";
 import { Header } from "./Header";
 
 test("should call startLogout on button click", () => {
@@ -16,6 +16,6 @@ test("should call startLogout on button click", () => {
   fireEvent.click(logoutButton);
 
   // Assert
-  expect(container.innerHTML).toMatch("React boilerplate");
+  expect(container).toMatchSnapshot();
   expect(startLogout).toHaveBeenCalledTimes(1);
 });

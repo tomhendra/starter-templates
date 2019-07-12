@@ -1,11 +1,11 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import { render } from "@testing-library/react";
 import DashboardPage from "./DashboardPage";
 
 test("Should render DashboardPage correctly", () => {
-  const container = document.createElement("div");
+  const { getByText } = render(<DashboardPage />);
 
-  ReactDOM.render(<DashboardPage />, container);
+  const dashboardDiv = getByText("Dashboard page content...");
 
-  expect(container).toMatchSnapshot();
+  expect(dashboardDiv.innerHTML).toMatch("Dashboard page content...");
 });

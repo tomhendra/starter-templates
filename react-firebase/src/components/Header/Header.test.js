@@ -1,15 +1,21 @@
 import React from "react";
-import { shallow } from "enzyme";
+import { fireEvent } from "@testing-library/react";
+import renderWithRouter from "../../tests/utils/renderWithRouter";
 import { Header } from "./Header";
 
-test("should render Header correctly", () => {
-  const wrapper = shallow(<Header startLogout={() => {}} />);
-  expect(wrapper).toMatchSnapshot();
-});
-
 test("should call startLogout on button click", () => {
+  // Arrange
   const startLogout = jest.fn();
-  const wrapper = shallow(<Header startLogout={startLogout} />);
-  wrapper.find("button").simulate("click");
-  expect(startLogout).toHaveBeenCalled();
+  const { container, getByText } = renderWithRouter(
+    <Header startLogout={startLogout} />
+  );
+  const leftClick = { button: 0 };
+  const logoutButton = getByText(/Logout/i, leftClick);
+
+  // Act
+  fireEvent.click(logoutButton);
+
+  // Assert
+  expect(container.innerHTML).toMatch("React boilerplate");
+  expect(startLogout).toHaveBeenCalledTimes(1);
 });

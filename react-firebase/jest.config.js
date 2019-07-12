@@ -3,8 +3,10 @@ module.exports = {
   moduleDirectories: ["src", "node_modules"],
   moduleNameMapper: {
     "\\.module\\.(css|scss)$": "identity-obj-proxy",
-    "\\.(css|scss)$": require.resolve("./src/tests/styleMock.js"),
-    "\\.(jpg|gif|ttf|eot|svg)$": require.resolve("./src/tests/fileMock.js")
+    "\\.(css|scss)$": require.resolve("./src/tests/mocks/styleMock.js"),
+    "\\.(jpg|gif|ttf|eot|svg)$": require.resolve(
+      "./src/tests/mocks/fileMock.js"
+    )
   },
   setupFiles: ["<rootDir>/src/tests/setupTests.js", "jest-localstorage-mock"],
   collectCoverageFrom: [

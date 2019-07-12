@@ -36,7 +36,7 @@
   "dependencies": {
     "core-js": "^3.1.4",
     "express": "^4.17.1",
-    "firebase": "^6.2.4",
+    "firebase": "^6.3.0",
     "history": "^4.9.0",
     "moment": "^2.24.0",
     "prop-types": "15.7.2",
@@ -54,7 +54,7 @@
     "@babel/plugin-proposal-class-properties": "^7.5.0",
     "@babel/preset-env": "^7.5.4",
     "@babel/preset-react": "^7.0.0",
-    "@testing-library/dom": "^5.5.2",
+    "@testing-library/dom": "^5.5.3",
     "@testing-library/jest-dom": "^4.0.0",
     "@testing-library/react": "^8.0.4",
     "babel-eslint": "^10.0.2",

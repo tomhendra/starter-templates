@@ -5,13 +5,28 @@ $blue: #1c88bf;
 $dark-blue: #364051;
 $off-white: #f7f7f7;
 
-// Font sizes 
-$font-size-large: 1.8rem;
-$font-size-small: 1.4rem;
+// Font sizes
+$font-small: 1.4rem;
+$font-base: 1.6rem;
+$font-large: 1.8rem;
 
 // Spacing
-$s-size: 1.2rem;
-$m-size: 1.6rem;
-$l-size: 3.2rem;
-$xl-size: 4.8rem;
+$small-1-size: 0.4rem;
+$small-2-size: 0.8rem;
+$small-3-size: 1.2rem;
+$base-size: 1.6rem;
+$medium-1-size: 2.4rem;
+$medium-2-size: 3.2rem;
+$medium-3-size: 4.8rem;
+$large-1-size: 6.4rem;
+$large-2-size: 9.6rem;
+$large-3-size: 12.8rem;
+$huge-1-size: 19.2rem;
+$huge-2-size: 25.6rem;
+$huge-3-size: 38.4rem;
+$massive-1-size: 51.2rem;
+$massive-2-size: 64rem;
+$massive-3-size: 76.8rem;
+
+// Breakpoints
 $desktop-breakpoint: 45rem;

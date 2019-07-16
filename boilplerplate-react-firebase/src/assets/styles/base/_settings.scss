@@ -1,32 +1,108 @@
-// Colours
-$dark-grey: #333;
-$grey: #666;
-$blue: #1c88bf;
-$dark-blue: #364051;
-$off-white: #f7f7f7;
+// Primary colours
+$primary-dark-1: hsl(204, 96%, 27%);
+$primary-dark-2: hsl(203, 87%, 34%);
+$primary-dark-3: hsl(202, 83%, 41%);
+$primary-dark-4: hsl(201, 79%, 46%);
+$primary-dark-5: hsl(199, 84%, 55%);
+$primary-light-1: hsl(197, 92%, 61%);
+$primary-light-2: hsl(196, 94%, 67%);
+$primary-light-3: hsl(195, 97%, 75%);
+$primary-light-4: hsl(195, 100%, 85%);
+$primary-light-5: hsl(195, 100%, 95%);
+
+// Neutral colours
+$grey-dark-1: hsl(210, 24%, 16%);
+$grey-dark-2: hsl(209, 20%, 25%);
+$grey-dark-3: hsl(209, 18%, 30%);
+$grey-dark-4: hsl(209, 14%, 37%);
+$grey-dark-5: hsl(211, 12%, 43%);
+$grey-light-1: hsl(211, 10%, 53%);
+$grey-light-2: hsl(211, 13%, 65%);
+$grey-light-3: hsl(210, 16%, 82%);
+$grey-light-4: hsl(214, 15%, 91%);
+$grey-light-5: hsl(216, 33%, 97%);
+
+// Accent colours
+$accent-dark-1: hsl(320, 100%, 19%);
+$accent-dark-2: hsl(322, 93%, 27%);
+$accent-dark-3: hsl(324, 93%, 33%);
+$accent-dark-4: hsl(326, 90%, 39%);
+$accent-dark-5: hsl(328, 85%, 46%);
+$accent-light-1: hsl(330, 79%, 56%);
+$accent-light-2: hsl(334, 86%, 67%);
+$accent-light-3: hsl(336, 100%, 77%);
+$accent-light-4: hsl(338, 100%, 86%);
+$accent-light-5: hsl(341, 100%, 95%);
+
+// Destructive action colours
+$negative-dark-1: hsl(348, 94%, 20%);
+$negative-dark-2: hsl(350, 94%, 28%);
+$negative-dark-3: hsl(352, 90%, 35%);
+$negative-dark-4: hsl(354, 85%, 44%);
+$negative-dark-5: hsl(356, 75%, 53%);
+$negative-light-1: hsl(360, 83%, 62%);
+$negative-light-2: hsl(360, 91%, 69%);
+$negative-light-3: hsl(360, 100%, 80%);
+$negative-light-4: hsl(360, 100%, 87%);
+$negative-light-5: hsl(360, 100%, 95%);
+
+// Warning colours
+$warning-dark-1: hsl(15, 86%, 30%);
+$warning-dark-2: hsl(22, 82%, 39%);
+$warning-dark-3: hsl(29, 80%, 44%);
+$warning-dark-4: hsl(36, 77%, 49%);
+$warning-dark-5: hsl(42, 87%, 55%);
+$warning-light-1: hsl(44, 92%, 63%);
+$warning-light-2: hsl(48, 94%, 68%);
+$warning-light-3: hsl(48, 95%, 76%);
+$warning-light-4: hsl(48, 100%, 88%);
+$warning-light-5: hsl(49, 100%, 96%);
+
+// Positive action colours
+$positive-dark-1: hsl(170, 97%, 15%);
+$positive-dark-2: hsl(168, 80%, 23%);
+$positive-dark-3: hsl(166, 72%, 28%);
+$positive-dark-4: hsl(164, 71%, 34%);
+$positive-dark-5: hsl(162, 63%, 41%);
+$positive-light-1: hsl(160, 51%, 49%);
+$positive-light-2: hsl(158, 58%, 62%);
+$positive-light-3: hsl(156, 73%, 74%);
+$positive-light-4: hsl(154, 75%, 87%);
+$positive-light-5: hsl(152, 68%, 96%);
 
 // Font sizes
-$font-small: 1.4rem;
-$font-base: 1.6rem;
-$font-large: 1.8rem;
+$font-small: 1.2rem;
+$font-base: 1.4rem;
+$font-medium-1: 1.6rem;
+$font-medium-2: 1.8rem;
+$font-medium-3: 2rem;
+$font-large-1: 2.4rem;
+$font-large-2: 3rem;
+$font-large-3: 3.6rem;
+$font-huge-1: 4.8rem;
+$font-huge-2: 6rem;
+$font-huge-3: 7.2rem;
+// For the best reading experience, make your paragraphs wide enough to fit between 45 and 75 characters per line.
+// The easiest way to do this on the web is using em units, which are relative to the current font size.
+// A width of 20-35em will get you in the right ballpark.
 
 // Spacing
-$small-1-size: 0.4rem;
-$small-2-size: 0.8rem;
-$small-3-size: 1.2rem;
-$base-size: 1.6rem;
-$medium-1-size: 2.4rem;
-$medium-2-size: 3.2rem;
-$medium-3-size: 4.8rem;
-$large-1-size: 6.4rem;
-$large-2-size: 9.6rem;
-$large-3-size: 12.8rem;
-$huge-1-size: 19.2rem;
-$huge-2-size: 25.6rem;
-$huge-3-size: 38.4rem;
-$massive-1-size: 51.2rem;
-$massive-2-size: 64rem;
-$massive-3-size: 76.8rem;
+$small-1: 0.4rem;
+$small-2: 0.8rem;
+$small-3: 1.2rem;
+$base: 1.6rem;
+$medium-1: 2.4rem;
+$medium-2: 3.2rem;
+$medium-3: 4.8rem;
+$large-1: 6.4rem;
+$large-2: 9.6rem;
+$large-3: 12.8rem;
+$huge-1: 19.2rem;
+$huge-2: 25.6rem;
+$huge-3: 38.4rem;
+$massive-1: 51.2rem;
+$massive-2: 64rem;
+$massive-3: 76.8rem;
 
 // Breakpoints
 $desktop-breakpoint: 45rem;

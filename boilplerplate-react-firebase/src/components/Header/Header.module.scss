@@ -1,11 +1,11 @@
-@import '../../assets/styles/base/settings';
+@import "../../assets/styles/base/settings";
 
 .header {
-  background: $dark-blue;
+  background: $primary-dark-2;
 }
 
 .headerTitle {
-  color: white;
+  color: $grey-light-5;
   text-decoration: none;
   h1 {
     margin: 0;
@@ -16,7 +16,7 @@
   align-items: center;
   display: flex;
   justify-content: space-between;
-  padding: $s-size 0;
+  padding: $medium-1 0;
 }
 
 .headerButton {
@@ -24,16 +24,15 @@
   border: none;
   color: white;
   display: inline-block;
-  font-size: $font-size-large;
+  font-size: $font-medium-1;
   line-height: 1;
   font-weight: 300;
-  padding: $s-size;
+  padding: $small-1;
   text-decoration: none;
 }
 
 .contentContainer {
   margin: 0 auto;
   max-width: 80rem;
-  padding: 0 $m-size;
+  padding: 0 $small-2;
 }
-

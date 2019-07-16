@@ -1,43 +1,36 @@
+// body text
 @font-face {
-  font-family: 'SourceSansPro-Regular';
+  font-family: "SourceSansPro-Regular";
   font-display: fallback;
   font-weight: 400;
   font-style: normal;
-  src:
-    local('Source Sans Pro'), /* Checks if font is on users computer */
-    local('SourceSansPro-Regular'), /* Checks if font is on users computer */
-    url('/src/fonts/SourceSansPro-Regular.ttf') format('ttf'), 
+  src: local("Source Sans Pro"), local("SourceSansPro-Regular"),
+    url("/src/fonts/SourceSansPro-Regular.ttf") format("ttf");
 }
 
 @font-face {
-  font-family: 'SourceSansPro-Italic';
-  font-display: fallback;
-  font-weight: 400;
-  font-style: italic;
-  src:
-    local('Source Sans Pro'), /* Checks if font is on users computer */
-    local('SourceSansPro-Italic'), /* Checks if font is on users computer */
-    url('/src/fonts/SourceSansPro-Italic.ttf') format('ttf'), 
-}
-
-@font-face {
-  font-family: 'SourceSansPro-Bold';
+  font-family: "SourceSansPro-Bold";
   font-display: fallback;
   font-weight: 700;
   font-style: normal;
-  src:
-    local('Source Sans Pro'), /* Checks if font is on users computer */
-    local('SourceSansPro-Bold'), /* Checks if font is on users computer */
-    url('/src/fonts/SourceSansPro-Bold.ttf') format('ttf'), 
+  src: local("Source Sans Pro"), local("SourceSansPro-Bold"),
+    url("/src/fonts/SourceSansPro-Bold.ttf") format("ttf");
 }
 
 @font-face {
-  font-family: 'SourceSansPro-BoldItalic';
+  font-family: "SourceSansPro-Italic";
+  font-display: fallback;
+  font-weight: 400;
+  font-style: italic;
+  src: local("Source Sans Pro"), local("SourceSansPro-Italic"),
+    url("/src/fonts/SourceSansPro-Italic.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "SourceSansPro-BoldItalic";
   font-display: fallback;
   font-weight: 700;
   font-style: italic;
-  src:
-    local('Source Sans Pro'), /* Checks if font is on users computer */
-    local('SourceSansPro-BoldItalic'), /* Checks if font is on users computer */
-    url('/src/fonts/SourceSansPro-BoldItalic.ttf') format('ttf'), 
+  src: local("Source Sans Pro"), local("SourceSansPro-BoldItalic"),
+    url("/src/fonts/SourceSansPro-BoldItalic.ttf") format("ttf");
 }

@@ -1,10 +1,11 @@
-@import './src/assets/styles/base/settings';
+@import "./src/assets/styles/base/settings";
 
 .boxLayout {
-  background-image: url('../../assets/images/bg.jpg');
+  background-image: url("../../assets/images/waves.jpg");
   display: flex;
   justify-content: center;
   align-items: center;
+  background-position: center;
   background-size: cover;
   height: 100vh;
   width: 100vw;
@@ -12,22 +13,22 @@
 
 .boxLayoutBox {
   border-radius: 3px;
-  background: fade-out(white, .15);
-  padding: $l-size $m-size;
+  background: fade-out(white, 0.15);
+  padding: $large-1 $small-3;
   text-align: center;
-  width: 25rem;
+  width: 35rem;
 }
 
 .boxLayoutTitle {
-  margin: 0 0 $m-size 0;
+  margin: 0 0 $medium-2 0;
   line-height: 1;
 }
 
 .button {
-  background: $blue;
+  background: $primary-dark-2;
   border: none;
   color: white;
-  font-size: $font-size-large;
+  font-size: $font-medium-2;
   font-weight: 300;
-  padding: $s-size;
+  padding: $small-3;
 }

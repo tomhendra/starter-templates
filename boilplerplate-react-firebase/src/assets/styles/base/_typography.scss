@@ -1,36 +1,36 @@
 // body text
 @font-face {
-  font-family: "SourceSansPro-Regular";
+  font-family: "IdealSans-Book";
   font-display: fallback;
   font-weight: 400;
   font-style: normal;
-  src: local("Source Sans Pro"), local("SourceSansPro-Regular"),
-    url("/src/fonts/SourceSansPro-Regular.ttf") format("ttf");
+  src: local("Ideal Sans Book"), local("IdealSans-Book"),
+    url("/src/assets/fonts/IdealSans-Book.woff") format("woff");
 }
 
 @font-face {
-  font-family: "SourceSansPro-Bold";
+  font-family: "IdealSans-Semibold";
   font-display: fallback;
   font-weight: 700;
   font-style: normal;
-  src: local("Source Sans Pro"), local("SourceSansPro-Bold"),
-    url("/src/fonts/SourceSansPro-Bold.ttf") format("ttf");
+  src: local("Ideal Sans"), local("SourceSansPro-Bold"),
+    url("/src/assets/fonts/IdealSans-Semibold.woff") format("woff");
 }
 
 @font-face {
-  font-family: "SourceSansPro-Italic";
+  font-family: "IdealSans-BookItalic";
   font-display: fallback;
   font-weight: 400;
   font-style: italic;
-  src: local("Source Sans Pro"), local("SourceSansPro-Italic"),
-    url("/src/fonts/SourceSansPro-Italic.ttf") format("ttf");
+  src: local("Ideal Sans"), local("IdealSans-BookItalic"),
+    url("/src/assets/fonts/IdealSans-BookItalic.woff") format("woff");
 }
 
 @font-face {
-  font-family: "SourceSansPro-BoldItalic";
+  font-family: "IdealSans-SemiboldItalic";
   font-display: fallback;
   font-weight: 700;
   font-style: italic;
-  src: local("Source Sans Pro"), local("SourceSansPro-BoldItalic"),
-    url("/src/fonts/SourceSansPro-BoldItalic.ttf") format("ttf");
+  src: local("Ideal Sans"), local("IdealSans-SemiboldItalic"),
+    url("/src/assets/fonts/IdealSans-SemiboldItalic.woff") format("woff");
 }

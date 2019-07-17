@@ -70,6 +70,19 @@ $positive-light-3: hsl(156, 73%, 74%);
 $positive-light-4: hsl(154, 75%, 87%);
 $positive-light-5: hsl(152, 68%, 96%);
 
+// Shadows
+$shadow-1: 0 1px 3px hsla(0, 0%, 0%, 0.2);
+$shadow-2: 0 4px 6px hsla(0, 0%, 0%, 0.2);
+$shadow-3: 0 5px 15px hsla(0, 0%, 0%, 0.2);
+$shadow-4: 0 10px 24px hsla(0, 0%, 0%, 0.2);
+$shadow-5: 0 15px 35px hsla(0, 0%, 0%, 0.2);
+$shadow-alt-1: 0 1px 3px hsla(0, 0%, 0%, 0.12), 0 1px 2px hsla(0, 0%, 0%, 0.24);
+$shadow-alt-2: 0 3px 6px hsla(0, 0%, 0%, 0.15), 0 2px 4px hsla(0, 0%, 0%, 0.12);
+$shadow-alt-3: 0 10px 20px hsla(0, 0%, 0%, 0.15), 0 3px 6px hsla(0, 0%, 0%, 0.1);
+$shadow-alt-4: 0 15px 25px hsla(0, 0%, 0%, 0.15),
+  0 5px 10px hsla(0, 0%, 0%, 0.05);
+$shadow-alt-5: 0 20px 40px hsla(0, 0%, 0%, 0.2);
+
 // Font sizes
 $font-small: 1.2rem;
 $font-base: 1.4rem;

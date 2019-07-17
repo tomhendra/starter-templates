@@ -1,7 +1,8 @@
 @import "./src/assets/styles/base/settings";
 
 .boxLayout {
-  background-image: url("../../assets/images/waves.jpg");
+  background: linear-gradient(hsla(0, 0%, 0%, 0.55), hsla(0, 0%, 0%, 0.55)),
+    url("../../assets/images/waves.jpg");
   display: flex;
   justify-content: center;
   align-items: center;
@@ -13,7 +14,7 @@
 
 .boxLayoutBox {
   border-radius: 3px;
-  background: fade-out(white, 0.15);
+  background: $grey-light-5;
   padding: $large-1 $small-3;
   text-align: center;
   width: 35rem;

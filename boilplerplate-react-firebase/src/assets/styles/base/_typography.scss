@@ -2,16 +2,16 @@
 @font-face {
   font-family: "Ideal Sans Book";
   font-display: fallback;
-  font-weight: 400;
+  font-weight: normal;
   font-style: normal;
-  src: local("Ideal Sans Book"), local("Idea lSan Book"),
+  src: local("Ideal Sans Book"), local("Idea Sans Book"),
     url("/src/assets/fonts/IdealSans-Book.woff") format("woff");
 }
 
 @font-face {
   font-family: "Ideal Sans Semibold";
   font-display: fallback;
-  font-weight: 700;
+  font-weight: normal;
   font-style: normal;
   src: local("Ideal Sans"), local("SourceSansPro-Bold"),
     url("/src/assets/fonts/IdealSans-Semibold.woff") format("woff");
@@ -20,7 +20,7 @@
 @font-face {
   font-family: "Ideal Sans Book Italic";
   font-display: fallback;
-  font-weight: 400;
+  font-weight: normal;
   font-style: italic;
   src: local("Ideal Sans"), local("IdealSans-BookItalic"),
     url("/src/assets/fonts/IdealSans-BookItalic.woff") format("woff");
@@ -29,7 +29,7 @@
 @font-face {
   font-family: "Ideal Sans Semibold Italic";
   font-display: fallback;
-  font-weight: 700;
+  font-weight: normal;
   font-style: italic;
   src: local("Ideal Sans"), local("IdealSans-SemiboldItalic"),
     url("/src/assets/fonts/IdealSans-SemiboldItalic.woff") format("woff");

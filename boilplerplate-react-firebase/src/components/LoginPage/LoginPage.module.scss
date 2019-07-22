@@ -15,9 +15,10 @@
 .boxLayoutBox {
   border-radius: 3px;
   background: $grey-light-5;
-  padding: $large-1 $small-3;
+  padding: $large-2 $small-2;
   text-align: center;
   width: 35rem;
+  box-shadow: $shadow-alt-1;
 }
 
 .boxLayoutTitle {
@@ -32,4 +33,5 @@
   font-size: $font-medium-2;
   font-weight: 300;
   padding: $small-3;
+  border-radius: 4px;
 }

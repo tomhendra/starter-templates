@@ -4,11 +4,11 @@ A basic boilerplate with login functionality.
 
 ## Features
 
-- Front end framework: React & Redux
+- Front end: React & Redux
 - Routing: React Router
 - Styling: CSS Modules with Sass
 - Backend: Simple Express server
 - Database: Firebase
 - Testing: Jest, React Testing Library & Cypress
-- Package manager: Webpack
+- Bundler: Webpack
 - Deployment: Heroku

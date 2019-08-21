@@ -1,7 +1,7 @@
 <div align=center>
 <img alt="Gatsby" src="https://res.cloudinary.com/tomhendra/image/upload/v1566377250/portfolio-logo/logo-outlined-rectangle-bg.svg" width="100" />
 <h1>Webpack React Boilerplate</h1>
-<p>A basic boilerplate with login functionality.</p>
+<p>A basic web app boilerplate with login functionality using Firebase Google authentication, with testing built-in. Deploys to Heroku using a simple Express server.</p>
 </div>
 
 ## Features

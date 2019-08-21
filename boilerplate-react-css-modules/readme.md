@@ -4,8 +4,9 @@
 <h1 align="center">
   Webpack React Boilerplate
 </h1>
-
-#A basic boilerplate with login functionality.
+<p align="center">
+A basic boilerplate with login functionality.
+</p>
 
 ## Features
 
@@ -17,6 +18,8 @@
 - Testing: Jest, React Testing Library & Cypress
 - Bundler: Webpack
 - Deployment: Heroku
+
+## Details
 
 1.  **Front end**
 

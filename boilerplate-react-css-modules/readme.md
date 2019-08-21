@@ -1,13 +1,7 @@
 <div align=center>
-<p>
-    <img alt="Gatsby" src="https://res.cloudinary.com/tomhendra/image/upload/v1566377250/portfolio-logo/logo-outlined-rectangle-bg.svg" width="100" />
-</p>
-<h1>
-  Webpack React Boilerplate
-</h1>
-<p>
-A basic boilerplate with login functionality.
-</p>
+<img alt="Gatsby" src="https://res.cloudinary.com/tomhendra/image/upload/v1566377250/portfolio-logo/logo-outlined-rectangle-bg.svg" width="100" />
+<h1>Webpack React Boilerplate</h1>
+<p>A basic boilerplate with login functionality.</p>
 </div>
 
 ## Features

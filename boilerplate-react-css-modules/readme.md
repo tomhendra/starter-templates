@@ -1,13 +1,11 @@
 <p align="center">
-    <img alt="Gatsby" src="https://res.cloudinary.com/tomhendra/image/upload/v1566377250/portfolio-logo/logo-outlined-rectangle-bg.svg" width="150" />
+    <img alt="Gatsby" src="https://res.cloudinary.com/tomhendra/image/upload/v1566377250/portfolio-logo/logo-outlined-rectangle-bg.svg" width="100" />
 </p>
 <h1 align="center">
   Webpack React Boilerplate
 </h1>
 
-<h2 align="center">
-A basic boilerplate with login functionality. 
-</h2>
+#A basic boilerplate with login functionality.
 
 ## Features
 
@@ -82,20 +80,20 @@ A basic boilerplate with login functionality.
 
 7) **Bundler**
 
-_Description goes here_
+   _Description goes here_
 
-**[Links go here](https://github.com/tomhendra)**
+   **[Links go here](https://github.com/tomhendra)**
 
-```javascript
-terminal content goes here
-```
+   ```javascript
+   terminal content goes here
+   ```
 
-8. **Deployment**
+8) **Deployment**
 
-_Description goes here_
+   _Description goes here_
 
-**[Links go here](https://github.com/tomhendra)**
+   **[Links go here](https://github.com/tomhendra)**
 
-```javascript
-terminal content goes here
-```
+   ```javascript
+   terminal content goes here
+   ```

@@ -1,6 +1,13 @@
-# Webpack React Boilerplate
+<p align="center">
+    <img alt="Gatsby" src="https://res.cloudinary.com/tomhendra/image/upload/v1566377250/portfolio-logo/logo-outlined-rectangle-bg.svg" width="150" />
+</p>
+<h1 align="center">
+  Webpack React Boilerplate
+</h1>
 
-A basic boilerplate with login functionality.
+<h2 align="center">
+A basic boilerplate with login functionality. 
+</h2>
 
 ## Features
 
@@ -12,3 +19,83 @@ A basic boilerplate with login functionality.
 - Testing: Jest, React Testing Library & Cypress
 - Bundler: Webpack
 - Deployment: Heroku
+
+1.  **Front end**
+
+    _Description goes here_
+
+    **[Links go here](https://github.com/tomhendra)**
+
+    ```javascript
+    terminal content goes here
+    ```
+
+2.  **Routing**
+
+    _Description goes here_
+
+    **[Links go here](https://github.com/tomhendra)**
+
+    ```javascript
+    terminal content goes here
+    ```
+
+3.  **Styling**
+
+    _Description goes here_
+
+    **[Links go here](https://github.com/tomhendra)**
+
+    ```javascript
+    terminal content goes here
+    ```
+
+4) **Backend**
+
+   _Description goes here_
+
+   **[Links go here](https://github.com/tomhendra)**
+
+   ```javascript
+   terminal content goes here
+   ```
+
+5) **Database**
+
+   _Description goes here_
+
+   **[Links go here](https://github.com/tomhendra)**
+
+   ```javascript
+   terminal content goes here
+   ```
+
+6) **Testing**
+
+   _Description goes here_
+
+   **[Links go here](https://github.com/tomhendra)**
+
+   ```javascript
+   terminal content goes here
+   ```
+
+7) **Bundler**
+
+_Description goes here_
+
+**[Links go here](https://github.com/tomhendra)**
+
+```javascript
+terminal content goes here
+```
+
+8. **Deployment**
+
+_Description goes here_
+
+**[Links go here](https://github.com/tomhendra)**
+
+```javascript
+terminal content goes here
+```

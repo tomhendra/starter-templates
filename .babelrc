@@ -1,0 +1,13 @@
+{
+  "presets": [
+    [
+      "next/babel",
+      {
+        "preset-react": {
+          "runtime": "automatic"
+        }
+      }
+    ]
+  ]
+}
+// https://github.com/vercel/next.js/discussions/18440

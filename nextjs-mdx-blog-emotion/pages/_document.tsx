@@ -15,7 +15,27 @@ class Document extends NextDocument {
     return (
       <Html lang="en">
         <Head>
-          <link rel="stylesheet" href="/fonts/fonts.css" />
+          <link
+            rel="preload"
+            href="/fonts/FiraCode-VariableFont_wght.ttf"
+            as="font"
+            type="font/ttf"
+            crossOrigin="anonymous"
+          />
+          <link
+            rel="preload"
+            href="/fonts/Heebo-VariableFont_wght.ttf"
+            as="font"
+            type="font/ttf"
+            crossOrigin="anonymous"
+          />
+          <link
+            rel="preload"
+            href="/fonts/PlayfairDisplay-VariableFont_wght.ttf"
+            as="font"
+            type="font/ttf"
+            crossOrigin="anonymous"
+          />
         </Head>
         <body>
           <Main />

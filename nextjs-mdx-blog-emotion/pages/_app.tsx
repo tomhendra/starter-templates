@@ -2,6 +2,9 @@ import { ThemeProvider } from '@emotion/react';
 import theme from 'theme';
 import type { AppProps } from 'next/app';
 import { DefaultSeo } from 'next-seo';
+import 'styles/reset.css';
+import 'styles/global.css';
+import 'styles/fonts.css';
 
 function App({ Component, pageProps }: AppProps) {
   return (

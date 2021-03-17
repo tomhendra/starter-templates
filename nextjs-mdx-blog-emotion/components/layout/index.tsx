@@ -1,4 +1,5 @@
-import { Container, Navbar } from '@components';
+import { Container, Navbar } from 'components';
+import theme from 'theme';
 
 interface LayoutProps {
   children?: React.ReactNode;
@@ -11,13 +12,13 @@ export function Layout({ children }: LayoutProps) {
         display: 'flex',
         flexDirection: 'column',
         minHeight: '100vh',
-        variant: 'layout.root',
+        ...theme.layout.root,
       }}
     >
       <header
         css={{
           width: '100%',
-          variant: 'layout.header',
+          ...theme.layout.header,
         }}
       >
         <Container>
@@ -28,7 +29,7 @@ export function Layout({ children }: LayoutProps) {
         css={{
           width: '100%',
           flex: '1 1 auto',
-          variant: 'layout.main',
+          ...theme.layout.main,
         }}
       >
         <Container>{children}</Container>
@@ -36,7 +37,7 @@ export function Layout({ children }: LayoutProps) {
       <footer
         css={{
           width: '100%',
-          variant: 'layout.footer',
+          ...theme.layout.footer,
         }}
       >
         <Container>

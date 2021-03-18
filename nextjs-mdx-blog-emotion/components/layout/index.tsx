@@ -1,4 +1,5 @@
-import { Container, Navbar } from 'components';
+import { Navbar } from 'components';
+import { StyledContainer } from './styled';
 import theme from 'theme';
 
 interface LayoutProps {
@@ -12,7 +13,6 @@ export function Layout({ children }: LayoutProps) {
         display: 'flex',
         flexDirection: 'column',
         minHeight: '100vh',
-        ...theme.layout.root,
       }}
     >
       <header
@@ -21,9 +21,9 @@ export function Layout({ children }: LayoutProps) {
           ...theme.layout.header,
         }}
       >
-        <Container>
+        <StyledContainer>
           <Navbar />
-        </Container>
+        </StyledContainer>
       </header>
       <main
         css={{
@@ -32,7 +32,7 @@ export function Layout({ children }: LayoutProps) {
           ...theme.layout.main,
         }}
       >
-        <Container>{children}</Container>
+        <StyledContainer>{children}</StyledContainer>
       </main>
       <footer
         css={{
@@ -40,9 +40,9 @@ export function Layout({ children }: LayoutProps) {
           ...theme.layout.footer,
         }}
       >
-        <Container>
+        <StyledContainer>
           <p>Footer Goes Here</p>
-        </Container>
+        </StyledContainer>
       </footer>
     </div>
   );

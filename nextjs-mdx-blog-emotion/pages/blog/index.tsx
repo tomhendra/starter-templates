@@ -1,5 +1,5 @@
 import { POST_CONTENT_PATH, getMdxContent } from '@lib';
-import { BlogPostPreview, Layout, SEO } from '@components';
+import { BlogPostPreview, Layout, SEO, Stack } from '@components';
 import { MdxContent } from 'types';
 import { GetStaticProps } from 'next';
 
@@ -19,9 +19,11 @@ function Blog({ posts }: BlogProps) {
           }}
         >
           <h1>Blog</h1>
-          {posts.map(post => (
-            <BlogPostPreview key={post.slug} blog={post} />
-          ))}
+          <Stack>
+            {posts.map(post => (
+              <BlogPostPreview key={post.slug} blog={post} />
+            ))}
+          </Stack>
         </div>
       </Layout>
     </>

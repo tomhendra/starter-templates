@@ -1,4 +1,4 @@
-import { Layout, SEO } from '@components';
+import { Layout, SEO } from 'components';
 
 function Home() {
   return (

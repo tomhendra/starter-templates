@@ -1,11 +1,13 @@
-import { spacing } from './sizes';
+import { space } from './sizing';
+import { fontSizes } from './fonts';
+import { colors } from './colors';
 
 const heading = {
   fontFamily: 'heading',
   fontWeight: 'heading',
   lineHeight: 'heading',
-  margin: 0,
-  marginBottom: spacing[1],
+  margin: space[0],
+  marginBottom: space[1],
 };
 
 export const styles = {
@@ -23,41 +25,41 @@ export const styles = {
   },
   h1: {
     ...heading,
-    fontSize: 6,
-    mt: 2,
+    fontSize: fontSizes[6],
+    marginTop: space[2],
   },
   h2: {
     ...heading,
-    fontSize: 5,
-    mt: 2,
+    fontSize: fontSizes[5],
+    marginTop: space[2],
   },
   h3: {
     ...heading,
-    fontSize: 4,
-    mt: 3,
+    fontSize: fontSizes[4],
+    marginTop: space[3],
   },
   h4: {
     ...heading,
-    fontSize: 3,
+    fontSize: fontSizes[3],
   },
   h5: {
     ...heading,
-    fontSize: 2,
+    fontSize: fontSizes[2],
   },
   h6: {
     ...heading,
-    fontSize: 1,
-    mb: 2,
+    fontSize: fontSizes[1],
+    marginBottom: space[2],
   },
   code: {
-    p: 3,
+    padding: space[3],
   },
 
   pre: {},
   hr: {
-    bg: 'muted',
+    background: colors.muted,
     border: 0,
     height: '1px',
-    m: 3,
+    margin: space[3],
   },
 };

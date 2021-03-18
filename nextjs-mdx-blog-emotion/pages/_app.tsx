@@ -1,14 +1,14 @@
-import { ThemeProvider } from '@emotion/react';
-import theme from 'theme';
 import type { AppProps } from 'next/app';
 import { DefaultSeo } from 'next-seo';
+import { Global } from 'components';
 import 'styles/reset.css';
-import 'styles/global.css';
+import 'styles/colors.css';
 import 'styles/fonts.css';
 
 function App({ Component, pageProps }: AppProps) {
   return (
-    <ThemeProvider theme={theme}>
+    <>
+      <Global />
       <DefaultSeo
         openGraph={{
           type: 'website',
@@ -23,7 +23,7 @@ function App({ Component, pageProps }: AppProps) {
         }}
       />
       <Component {...pageProps} />
-    </ThemeProvider>
+    </>
   );
 }
 

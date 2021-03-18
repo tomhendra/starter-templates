@@ -1,15 +1,15 @@
-import { spacing } from './sizes';
+import { spacing } from './sizing';
 import { shadows } from './shadows';
 
 export const layout = {
-  root: {},
   header: {
     background: 'inherit',
     boxShadow: shadows.sm,
-    padding: spacing[10],
   },
   main: {
-    paddingTop: spacing[10],
+    paddingTop: spacing[8],
   },
-  footer: {},
+  footer: {
+    background: 'inherit',
+  },
 };

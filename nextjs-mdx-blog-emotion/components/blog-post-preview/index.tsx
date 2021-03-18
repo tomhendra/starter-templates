@@ -1,5 +1,6 @@
 import { PostPreview } from '@types';
 import Link from 'next/link';
+import { StyledContainer, StyledSpan } from './styled';
 
 interface Props {
   blog: PostPreview;
@@ -7,21 +8,15 @@ interface Props {
 
 export function BlogPostPreview({ blog }: Props) {
   return (
-    <div
-      role="group"
-      css={{
-        border: '1px solid',
-        borderColor: 'text',
-        borderRadius: 4,
-        mt: 4,
-        p: 4,
-      }}
-    >
+    <StyledContainer role="group">
       <Link href={`/blog/${blog.slug}`} passHref>
         <a>{blog.title}</a>
       </Link>
       <p>{blog.excerpt}</p>
-      <div>{blog.tags && blog.tags.map(tag => <p key={tag}>#{tag}</p>)}</div>
-    </div>
+      <div>
+        {blog.tags &&
+          blog.tags.map(tag => <StyledSpan key={tag}>#{tag}</StyledSpan>)}
+      </div>
+    </StyledContainer>
   );
 }

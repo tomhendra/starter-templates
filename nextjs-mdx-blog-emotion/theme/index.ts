@@ -10,8 +10,7 @@ import { colors } from './colors';
 import { opacities } from './opacities';
 import { radii } from './radii';
 import { shadows } from './shadows';
-import { sizes } from './sizes';
-import { space } from './space';
+import { sizes, space } from './sizing';
 import { zIndices } from './z-indices';
 import { transitions } from './transitions';
 import { transforms } from './transforms';
@@ -26,6 +25,7 @@ const mediaQueries = {
   small: `@media screen and (min-width: ${breakpoints[0]})`,
   medium: `@media screen and (min-width: ${breakpoints[1]})`,
   large: `@media screen and (min-width: ${breakpoints[2]})`,
+  xlarge: `@media screen and (min-width: ${breakpoints[3]})`,
 };
 
 const theme = {

@@ -1,24 +1,8 @@
 import { Navbar } from '@components/navbar';
-import { render, screen } from '@test/test-utils';
+import { render, screen } from '@testing-library/react';
 
-test('renders with the default styles for the default colorMode', () => {
-  render(<Navbar />, {
-    colorMode: 'default',
-  });
-  const link = screen.getByText(/tomhendra.dev/i);
-  expect(link).toMatchInlineSnapshot(`
-    <a
-      href="/"
-    >
-      tomhendra.dev
-    </a>
-  `);
-});
-
-test('renders with the dark styles for the dark colorMode', () => {
-  render(<Navbar />, {
-    colorMode: 'dark',
-  });
+test('renders as expected', () => {
+  render(<Navbar />);
   const link = screen.getByText(/tomhendra.dev/i);
   expect(link).toMatchInlineSnapshot(`
     <a

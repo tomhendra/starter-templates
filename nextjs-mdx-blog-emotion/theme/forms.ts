@@ -1,10 +1,15 @@
+import { colors } from './colors';
+import { shadows } from './shadows';
+import { space } from './sizing';
+import { radii } from './radii';
+import { lineHeights } from './fonts';
+
 const commonInputStyles = {
-  py: 2,
-  px: 3,
+  padding: `${space[2]} ${space[3]}`,
   fontSize: '100%',
-  borderRadius: 'default',
+  borderRadius: radii.default,
   appearance: 'none',
-  lineHeight: 'tight',
+  lineHeight: lineHeights.tight,
 };
 
 export const forms = {
@@ -12,24 +17,24 @@ export const forms = {
     shadow: {
       ...commonInputStyles,
       border: 'none',
-      color: 'gray.7',
-      boxShadow: 'default',
+      color: colors.gray[7],
+      boxShadow: shadows.default,
       '&:focus': {
         outline: 'none',
-        boxShadow: 'outline',
+        boxShadow: shadows.outline,
       },
     },
     inline: {
       ...commonInputStyles,
-      backgroundColor: 'gray.2',
+      backgroundColor: colors.gray[2],
       borderWidth: '2px',
       borderStyle: 'solid',
-      borderColor: 'gray.2',
-      color: 'gray.7',
+      borderColor: colors.gray[2],
+      color: colors.gray[7],
       '&:focus': {
         outline: 'none',
-        borderColor: 'primary',
-        backgroundColor: 'white',
+        borderColor: colors.primary,
+        backgroundColor: colors.white,
       },
     },
     underline: {
@@ -38,13 +43,13 @@ export const forms = {
       border: 'none',
       borderBottomWidth: '2px',
       borderBottomStyle: 'solid',
-      borderBottomColor: 'primary',
+      borderBottomColor: colors.primary,
       borderRadius: '0px',
-      color: 'gray.7',
+      color: colors.gray[7],
       '&:focus': {
         outline: 'none',
-        borderColor: 'primary',
-        backgroundColor: 'white',
+        borderColor: colors.primary,
+        backgroundColor: colors.white,
       },
     },
   },

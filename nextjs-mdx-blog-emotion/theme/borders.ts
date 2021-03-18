@@ -1,5 +1,9 @@
-export const borders = {};
-export const borderStyles = {};
+export const borders = {
+  // TODO
+};
+export const borderStyles = {
+  // TODO
+};
 export const borderWidths = {
   px: '1px',
   '0': '0',

@@ -181,7 +181,7 @@ textarea {
   font: inherit;
 }
 html {
-  font: 112.5%/1.45 'Heebo', sans-serif;
+  font: 112.5%/1.45 'Roboto Slab', serif;
   box-sizing: border-box;
   overflow-y: scroll;
 }
@@ -195,9 +195,8 @@ html {
   box-sizing: inherit;
 }
 body {
-  color: var(--tomhendra-colors-typeface-0);
-  font-family: 'Heebo', sans-serif;
-  font-weight: normal;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 350;
   word-wrap: break-word;
   font-kerning: normal;
   -moz-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
@@ -226,7 +225,7 @@ h1 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: 'Playfair Display', serif;
+  font-family: Inter, sans-serif;
   font-weight: 600;
   text-rendering: optimizeLegibility;
   font-size: 2rem;
@@ -242,7 +241,7 @@ h2 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: 'Playfair Display', serif;
+  font-family: Inter, sans-serif;
   font-weight: 600;
   text-rendering: optimizeLegibility;
   font-size: 1.51572rem;
@@ -258,7 +257,7 @@ h3 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: 'Playfair Display', serif;
+  font-family: Inter, sans-serif;
   font-weight: 600;
   text-rendering: optimizeLegibility;
   font-size: 1.31951rem;
@@ -274,7 +273,7 @@ h4 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: 'Playfair Display', serif;
+  font-family: Inter, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 1rem;
@@ -290,7 +289,7 @@ h5 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: 'Playfair Display', serif;
+  font-family: Inter, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 0.87055rem;
@@ -306,7 +305,7 @@ h6 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: 'Playfair Display', serif;
+  font-family: Inter, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 0.81225rem;

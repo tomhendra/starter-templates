@@ -62,12 +62,28 @@ const width = {
   '11/12': '91.666667%',
 };
 
+// width, height, min-width, max-width, min-height, max-height
 export const sizes = {
   ...spacing,
   ...maxWidth,
   ...width,
-  container: 768,
+  container: maxWidth['3xl'],
   full: '100%',
   screenHeight: '100vh',
   screenWidth: '100vw',
 };
+
+// margin, margin-top, margin-right, margin-bottom, margin-left,
+// padding, padding-top, padding-right, padding-bottom, padding-left,
+// grid-gap, grid-column-gap, grid-row-gap
+export const space = [
+  '0',
+  '0.25rem',
+  '0.5rem',
+  '1rem',
+  '2rem',
+  '4rem',
+  '8rem',
+  '16rem',
+  '32rem',
+];

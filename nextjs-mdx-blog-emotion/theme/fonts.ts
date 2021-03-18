@@ -41,15 +41,23 @@ export const fontWeights = {
   ...baseFontWeights,
   body: baseFontWeights.normal,
   heading: baseFontWeights.bold,
+  monospace: baseFontWeights.normal,
 };
 
-export const letterSpacings = {
+const baseLetterSpacings = {
   tighter: '-0.05em',
   tight: '-0.025em',
   normal: '0',
   wide: '0.025em',
   wider: '0.05em',
   widest: '0.1em',
+};
+
+export const letterSpacings = {
+  ...baseLetterSpacings,
+  body: baseLetterSpacings.normal,
+  heading: baseLetterSpacings.normal,
+  monospace: baseLetterSpacings.normal,
 };
 
 const baseLineHeights = {
@@ -65,4 +73,5 @@ export const lineHeights = {
   ...baseLineHeights,
   body: baseLineHeights.relaxed,
   heading: baseLineHeights.tight,
+  monospace: baseLineHeights.normal,
 };

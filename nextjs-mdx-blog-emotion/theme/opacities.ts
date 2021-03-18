@@ -1,1 +1,3 @@
-export const opacities = {};
+export const opacities = {
+  // TODO
+};

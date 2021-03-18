@@ -1,4 +1,4 @@
-import { spacing } from './sizes';
+import { spacing } from './sizing';
 
 export const transforms = {
   transformOrigin: {

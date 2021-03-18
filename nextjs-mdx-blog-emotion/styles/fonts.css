@@ -1,25 +1,23 @@
 @font-face {
-  font-family: 'Heebo';
+  font-family: 'Inter';
   font-style: normal;
-  /* font-weight: 100 900; */
+  font-weight: 100 900;
   font-display: swap;
-  src: local('Heebo') url(/fonts/Heebo-VariableFont_wght.ttf) format('truetype');
+  src: url(/fonts/Inter.woff2) format('woff2-variations');
 }
 
 @font-face {
-  font-family: 'Playfair Display';
+  font-family: 'Roboto Slab';
   font-style: normal;
-  /* font-weight: 100 900; */
+  font-weight: 100 900;
   font-display: swap;
-  src: local('Playfair Display')
-    url(/fonts/PlayfairDisplay-VariableFont_wght.ttf) format('truetype');
+  src: url(/fonts/RobotoSlab.woff2) format('woff2-variations');
 }
 
 @font-face {
-  font-family: 'Fira Code';
+  font-family: 'Roboto Mono';
   font-style: normal;
-  /* font-weight: 100 900; */
+  font-weight: 100 700;
   font-display: swap;
-  src: local('Fira Code') url(/fonts/FiraCode-VariableFont_wght.ttf)
-    format('truetype');
+  src: url(/fonts/RobotoMono.woff2) format('woff2-variations');
 }

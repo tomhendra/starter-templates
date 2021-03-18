@@ -9,6 +9,7 @@ module.exports = {
   testPathIgnorePatterns: ['<rootDir>/.next/', '<rootDir>/node_modules/'],
   moduleNameMapper: {
     '@components/(.*)': '<rootDir>/components/$1',
+    '@hooks/(.*)': '<rootDir>/hooks/$1',
     '@lib/(.*)': '<rootDir>/lib/$1',
     '@test/(.*)': '<rootDir>/test/$1',
     '@theme/(.*)': '<rootDir>/theme/$1',

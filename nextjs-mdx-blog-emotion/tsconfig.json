@@ -19,6 +19,8 @@
     "paths": {
       "@components": ["components/"],
       "@components/*": ["components/*"],
+      "@hooks": ["hooks/"],
+      "@hooks/*": ["hooks/*"],
       "@lib": ["lib/"],
       "@lib/*": ["lib/*"],
       "@test/": ["test/"],
@@ -34,6 +36,7 @@
     "*.*",
     "components/**/*",
     "content/**/*",
+    "hooks/**/*",
     "lib/**/*",
     "pages/**/*",
     "test/**/*",

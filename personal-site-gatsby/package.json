@@ -1,0 +1,66 @@
+{
+  "name": "personal-site",
+  "description": "Monorepo for Tom Hendra's personal site",
+  "author": "Tom Hendra <hola@tomhendra.dev>",
+  "repository": "https://github.com/tomhendra/portfolio",
+  "license": "MIT",
+  "version": "3.0.0",
+  "private": true,
+  "workspaces": [
+    "web",
+    "studio"
+  ],
+  "scripts": {
+    "start:web": "npm run --prefix web start",
+    "start:studio": "npm run --prefix studio start",
+    "dev": "run-p start:studio start:web",
+    "build:web": "npm run --prefix web build",
+    "build:studio": "npm run --prefix studio build",
+    "build": "run-p build:studio build:web",
+    "test": "npm run --prefix web test",
+    "lint": "tsc --noEmit && eslint '{web,studio}/**/*.{js,ts,tsx}' --ignore-path .gitignore",
+    "lint:fix": "npm run lint --fix",
+    "deploy:graphql-dev": "npm run --prefix studio deploy:graphql-dev",
+    "deploy:graphql-prod": "npm run --prefix studio deploy:graphql-prod",
+    "deploy:sanity": "npm run --prefix studio deploy:sanity",
+    "clear:web:cache": "npm run --prefix web clear:cache",
+    "clean": "rm -rf node_modules",
+    "clean:web": "npm run --prefix web clean",
+    "clean:studio": "npm run --prefix studio clean",
+    "clean:lockfile": "rm -rf package-lock.json",
+    "nuke": "run-s clean clear:web:cache clean:web clean:studio clean:lockfile",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "12.0.1",
+    "@commitlint/config-conventional": "12.0.1",
+    "@types/facepaint": "^1.2.1",
+    "@types/node": "14.14.34",
+    "@types/react": "17.0.3",
+    "@types/react-dom": "17.0.2",
+    "@types/react-helmet": "^6.1.0",
+    "@types/yup": "0.29.11",
+    "@typescript-eslint/eslint-plugin": "4.17.0",
+    "@typescript-eslint/parser": "4.17.0",
+    "eslint": "^7.22.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-import": "2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-react": "^7.22.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "husky": "^5.1.3",
+    "lint-staged": "10.5.4",
+    "npm-run-all": "^4.1.5",
+    "prettier": "2.2.1",
+    "typescript": "4.2.3"
+  },
+  "lint-staged": {
+    "{web,studio}/**/*.{js,ts,tsx}": "eslint --fix --quiet --ignore-path .gitignore"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  }
+}

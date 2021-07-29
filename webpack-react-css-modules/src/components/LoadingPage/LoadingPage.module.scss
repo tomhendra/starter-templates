@@ -1,0 +1,14 @@
+@import './src/assets/styles/base/settings';
+
+.loader {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loaderImage {
+  height: 6rem;
+  width: 6rem;
+}

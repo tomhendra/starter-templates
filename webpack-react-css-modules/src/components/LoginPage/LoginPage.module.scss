@@ -1,0 +1,37 @@
+@import "./src/assets/styles/base/settings";
+
+.boxLayout {
+  background: linear-gradient(hsla(0, 0%, 0%, 0.55), hsla(0, 0%, 0%, 0.55)),
+    url("../../assets/images/waves.jpg");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+}
+
+.boxLayoutBox {
+  border-radius: 3px;
+  background: $grey-light-5;
+  padding: $large-2 $small-2;
+  text-align: center;
+  width: 35rem;
+  box-shadow: $shadow-alt-1;
+}
+
+.boxLayoutTitle {
+  margin: 0 0 $medium-2 0;
+  line-height: 1;
+}
+
+.button {
+  background: $primary-dark-2;
+  border: none;
+  color: white;
+  font-size: $font-medium-2;
+  font-weight: 300;
+  padding: $small-3;
+  border-radius: 4px;
+}

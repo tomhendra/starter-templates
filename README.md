@@ -1,1 +1,1 @@
-Some templates for a quick start!  
+General laboratory for playing with new ideas and creating starter templates.

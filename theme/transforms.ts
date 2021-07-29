@@ -1,0 +1,52 @@
+import { spacing } from './sizing';
+
+export const transforms = {
+  transformOrigin: {
+    center: 'center',
+    top: 'top',
+    'top-right': 'top right',
+    right: 'right',
+    'bottom-right': 'bottom right',
+    bottom: 'bottom',
+    'bottom-left': 'bottom left',
+    left: 'left',
+    'top-left': 'top left',
+  },
+  translate: {
+    ...spacing,
+    '-full': '-100%',
+    '-1/2': '-50%',
+    '1/2': '50%',
+    full: '100%',
+  },
+  scale: {
+    '0': '0',
+    '50': '.5',
+    '75': '.75',
+    '90': '.9',
+    '95': '.95',
+    '100': '1',
+    '105': '1.05',
+    '110': '1.1',
+    '125': '1.25',
+    '150': '1.5',
+  },
+  rotate: {
+    '-180': '-180deg',
+    '-90': '-90deg',
+    '-45': '-45deg',
+    '0': '0',
+    '45': '45deg',
+    '90': '90deg',
+    '180': '180deg',
+  },
+  skew: {
+    '-12': '-12deg',
+    '-6': '-6deg',
+    '-3': '-3deg',
+    '0': '0',
+    '3': '3deg',
+    '6': '6deg',
+    '12': '12deg',
+  },
+};

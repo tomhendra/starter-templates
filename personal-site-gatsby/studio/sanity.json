@@ -1,0 +1,38 @@
+{
+  "root": true,
+  "api": {
+    "projectId": "xm39xo8g",
+    "dataset": "production"
+  },
+  "env": {
+    "development": {
+      "api": {
+        "dataset": "development"
+      }
+    }
+  },
+  "project": {
+    "name": "tomhendra.dev",
+    "basePath": "/studio"
+  },
+  "plugins": [
+    "@sanity/base",
+    "@sanity/components",
+    "@sanity/default-layout",
+    "@sanity/default-login",
+    "@sanity/desk-tool",
+    "@sanity/code-input",
+    "google-analytics",
+    "@sanity/dashboard"
+  ],
+  "parts": [
+    {
+      "implements": "part:@sanity/base/schema",
+      "path": "./schemas/schema.js"
+    },
+    {
+      "implements": "part:@sanity/dashboard/config",
+      "path": "./dashboard-config.js"
+    }
+  ]
+}

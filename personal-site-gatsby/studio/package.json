@@ -1,0 +1,38 @@
+{
+  "name": "studio",
+  "description": "Sanity studio CMS for Tom Hendra portfolio website.",
+  "author": "Tom Hendra <hola@tomhendra.dev>",
+  "repository": "https://github.com/tomhendra/portfolio",
+  "license": "MIT",
+  "version": "2.0.0",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "start": "sanity start",
+    "build": "sanity build",
+    "dataset:export-prod": "rm- rf export && sanity dataset export production export/production.tar.gz",
+    "dataset:import-prod": "sanity dataset import export/production.tar.gz development --replace",
+    "deploy:graphql-dev": "sanity graphql deploy --dataset development --generation gen2 --playground",
+    "deploy:graphql-prod": "sanity graphql deploy --dataset production --generation gen2 --no-playground",
+    "deploy:graphql": "npm run deploy:graphql-prod && npm run deploy:graphql-dev",
+    "deploy:sanity": "sanity deploy",
+    "init": "sanity init && npm run deploy:graphql",
+    "clean": "rm -rf node_modules"
+  },
+  "dependencies": {
+    "@sanity/base": "^2.6.0",
+    "@sanity/cli": "^2.6.0",
+    "@sanity/code-input": "^2.2.6",
+    "@sanity/components": "^2.2.6",
+    "@sanity/core": "^2.6.1",
+    "@sanity/dashboard": "^2.2.6",
+    "@sanity/default-layout": "^2.6.0",
+    "@sanity/default-login": "^2.2.6",
+    "@sanity/desk-tool": "^2.6.1",
+    "date-fns": "^2.16.1",
+    "prop-types": "^15.7.2",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
+    "sanity-plugin-google-analytics": "^0.2.6"
+  }
+}
